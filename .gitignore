@@ -205,6 +205,12 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# Local market archives, legacy snapshots and generated research artifacts
+/data/
+/runs/
+/results/
+*.partial
+
 # Ruff stuff:
 .ruff_cache/
 
@@ -218,3 +224,53 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Historical research stays intact locally; publication is reviewed separately.
+/experiments/
+/docs/tables/
+/docs/figures/
+
+# Generated research outputs and local download/training caches.
+/outputs/
+/artifacts/
+/checkpoints/
+/tmp/
+/temp/
+/.cache/
+
+# Local Conda environments, IDE settings and agent workspace state.
+/.conda/
+/conda-env/
+/envs/
+/.idea/
+/.vscode/
+/.codex/
+
+# Local secrets; sanitized example templates remain eligible for review.
+.env.*
+!.env.example
+!.env.sample
+/.netrc
+/.aws/
+/.ssh/
+/secrets/
+/credentials/
+/credentials.json
+/credentials.yaml
+/credentials.yml
+/secrets.json
+/secrets.yaml
+/secrets.yml
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+
+# Operating-system and editor temporary files.
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+*.tmp

@@ -1,0 +1,44 @@
+schema_version: five-asset-observations-v1
+start: '2020-01-01T00:00:00Z'
+end: '2023-01-01T00:00:00Z'
+interval: 1m
+output_namespace: five_asset_v1
+download_workers: 6
+funding_publication_lag_minutes: 1
+funding_maximum_age_hours: 12
+quote_price_relative_tolerance: 1.0e-8
+quote_price_absolute_floor: 1.0e-12
+large_minute_log_return_threshold: 0.10
+cross_market_log_basis_threshold_bps: 100
+execution_delay_minutes: 1
+assets:
+  BTCUSDT:
+    first_month: '2020-01'
+    public_open_utc: null
+    first_observed_bar_utc: '2020-01-01T00:00:00Z'
+    launch_note: Already trading before permitted window; no pre-2020 observations accessed.
+    theory_parameter_status: existing_paper_parameter_control_only
+  ETHUSDT:
+    first_month: '2020-01'
+    public_open_utc: null
+    first_observed_bar_utc: '2020-01-01T00:00:00Z'
+    launch_note: Already trading before permitted window; no pre-2020 observations accessed.
+    theory_parameter_status: existing_paper_parameter_control_only
+  BNBUSDT:
+    first_month: '2020-02'
+    public_open_utc: '2020-02-10T08:00:00Z'
+    first_observed_bar_utc: '2020-02-10T08:01:00Z'
+    launch_source: https://www.binance.com/en/blog/all/421499824684900404
+    theory_parameter_status: pending_historical_iota_reconciliation
+  DOGEUSDT:
+    first_month: '2020-07'
+    public_open_utc: '2020-07-10T09:00:00Z'
+    first_observed_bar_utc: '2020-07-10T09:00:00Z'
+    launch_source: https://www.binance.com/en/support/announcement/detail/7777402b13574c41afe13b334d3e047e
+    theory_parameter_status: paper_parameter_control_requires_contract_review
+  ADAUSDT:
+    first_month: '2020-01'
+    public_open_utc: '2020-01-31T08:00:00Z'
+    first_observed_bar_utc: '2020-01-31T08:01:00Z'
+    launch_source: https://www.binance.com/en/support/announcement/detail/360039355391
+    theory_parameter_status: paper_parameter_control_requires_contract_review

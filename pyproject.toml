@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spot-perp-basis-research"
+version = "0.1.0"
+description = "Reproducible research on cryptocurrency spot–perpetual basis dynamics"
+requires-python = ">=3.12"
+dependencies = ["numpy", "pandas", "pyarrow", "PyYAML", "matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
