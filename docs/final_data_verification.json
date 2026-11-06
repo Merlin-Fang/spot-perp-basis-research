@@ -1,0 +1,654 @@
+{
+  "acquisition": {
+    "downloaded_verified": {
+      "archives": 216,
+      "bytes": 241914992
+    },
+    "reused_verified": {
+      "archives": 228,
+      "bytes": 298227408
+    }
+  },
+  "authorized_scope": "raw_inputs_and_structural_QA_only",
+  "baseline_head": "29dec9b7315f39001ac6c9f0a1476ab661f6c410",
+  "baseline_tag": "pre-final-data-v1",
+  "calendar_boundary_checks": 28,
+  "canonical_source_set_sha256": "fe8c826cc8c29f92d6daa5339fe5e438e266eabd9e1cff538517abae649e1997",
+  "canonical_table_bytes": 818435652,
+  "canonical_table_set_sha256": "c624c8f9c9e8386f14d83b034820135ffcad16c5b34fd5c82f2d78add0a7673c",
+  "canonical_tables": 165,
+  "data_receipts_sha256": {
+    "build_receipt.json": "e4ebcd01fba3d61440b1d54d62c8aa0b13a5fb9363f46a95b71b42aadf7cc0e5",
+    "idempotence_verification.json": "86adb477a4313fd3a446e838c5d034f6abdc91f7740a2e1fd8e85709718484a1",
+    "inventory.json": "2a0c7549a7db3aae6a316c9a543ba47ce6d3ed0e4b74fb7f23690880d0afc70a",
+    "preservation_verification.json": "a08e69f967bc915f7990507539dd5154786b79b766240ed6534a898d9dd0a49d",
+    "qa_receipt.json": "d2b8649fb334a14947b6aad5ce6bd92a5a27f834d4f5c9133aa02f5cc7de8fc1"
+  },
+  "data_schema": "final-inputs-v1",
+  "duplicate_keys": 0,
+  "effr": {
+    "availability_lag_calendar_days": 7,
+    "duplicates": 0,
+    "first_effective": "2022-12-01 00:00:00+00:00",
+    "last_effective": "2025-12-31 00:00:00+00:00",
+    "max_effective_gap_days": 4.0,
+    "official_publisher_checksum": null,
+    "percent_to_decimal_divisor": 100,
+    "records": 772,
+    "records_by_effective_year": {
+      "2022": 21,
+      "2023": 250,
+      "2024": 251,
+      "2025": 250
+    },
+    "weekend_effective_records": 0
+  },
+  "effr_source_sha256": "db09a9fdad6a3ea52a85e9f6c20249dd59bb5647e11d4f273d8f2ea0fd62676c",
+  "environment": {
+    "PyYAML": "6.0.3",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "pyarrow": "26.0.0",
+    "python": "3.14.7",
+    "setuptools": "84.0.0"
+  },
+  "final_outcome_access": false,
+  "final_period_zip_files": 432,
+  "frozen_evaluation_flags_changed": false,
+  "funding_events_final": 13152,
+  "funding_events_including_warmup": 13524,
+  "funding_per_asset_year": [
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1095,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "BTCUSDT",
+      "year": 2023
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1098,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "BTCUSDT",
+      "year": 2024
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1095,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "BTCUSDT",
+      "year": 2025
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1095,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "ETHUSDT",
+      "year": 2023
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1098,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "ETHUSDT",
+      "year": 2024
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1095,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "ETHUSDT",
+      "year": 2025
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1095,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "DOGEUSDT",
+      "year": 2023
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1098,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "DOGEUSDT",
+      "year": 2024
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1095,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "DOGEUSDT",
+      "year": 2025
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1095,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "ADAUSDT",
+      "year": 2023
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1098,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "ADAUSDT",
+      "year": 2024
+    },
+    {
+      "cadence_gaps": 0,
+      "duplicate_settlements": 0,
+      "events": 1095,
+      "interval_changes": 0,
+      "interval_hours": [
+        8.0
+      ],
+      "symbol": "ADAUSDT",
+      "year": 2025
+    }
+  ],
+  "hourly_input_coverage": [
+    {
+      "asset": "BTCUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8760,
+      "paired_active": 8756,
+      "paired_valid": 8758,
+      "year": 2023
+    },
+    {
+      "asset": "BTCUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8784,
+      "paired_active": 8783,
+      "paired_valid": 8784,
+      "year": 2024
+    },
+    {
+      "asset": "BTCUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8760,
+      "paired_active": 8760,
+      "paired_valid": 8760,
+      "year": 2025
+    },
+    {
+      "asset": "ETHUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8760,
+      "paired_active": 8757,
+      "paired_valid": 8758,
+      "year": 2023
+    },
+    {
+      "asset": "ETHUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8784,
+      "paired_active": 8783,
+      "paired_valid": 8784,
+      "year": 2024
+    },
+    {
+      "asset": "ETHUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8760,
+      "paired_active": 8760,
+      "paired_valid": 8760,
+      "year": 2025
+    },
+    {
+      "asset": "DOGEUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8760,
+      "paired_active": 8753,
+      "paired_valid": 8758,
+      "year": 2023
+    },
+    {
+      "asset": "DOGEUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8784,
+      "paired_active": 8783,
+      "paired_valid": 8784,
+      "year": 2024
+    },
+    {
+      "asset": "DOGEUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8760,
+      "paired_active": 8760,
+      "paired_valid": 8760,
+      "year": 2025
+    },
+    {
+      "asset": "ADAUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8760,
+      "paired_active": 8736,
+      "paired_valid": 8758,
+      "year": 2023
+    },
+    {
+      "asset": "ADAUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8784,
+      "paired_active": 8780,
+      "paired_valid": 8784,
+      "year": 2024
+    },
+    {
+      "asset": "ADAUSDT",
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "origins": 8760,
+      "paired_active": 8760,
+      "paired_valid": 8760,
+      "year": 2025
+    }
+  ],
+  "hourly_rows": 105216,
+  "idempotence": {
+    "content_size_mtime_changed": [],
+    "elapsed_seconds": 2.36,
+    "files_checked": 1503,
+    "maximum_rss_kib": 140912,
+    "offline_exit_status": 0
+  },
+  "implementation_sha256": {
+    "configs/final_data_v1.json": "b6cdfffbcdd41c0ae033d9c112d68b09a548e383604fa76687f6a175c189978f",
+    "configs/final_evaluation.yaml": "647fc5f3ca09b58c0a7ea74644b6316ed7eda6fd6e3ed1d741464e57d6861e21",
+    "docs/final_evaluation_protocol.md": "728d1596f0a219847a252de57dff72867801c090326779eedc8df11383631e26",
+    "requirements-lock.txt": "8659c27688a1061cea4073e481823c34ab9d6f0b964f513b6d1856539a3562be",
+    "scripts/prepare_final_data.py": "52080e62516432846fe8a87fce577db60a56ea815264c182996f55adbd670845",
+    "src/spot_perp_basis/data/final_inputs.py": "526bf7f7490a77bfa44b795166a63c88f59423a161c08f77551df00b7e011f0c",
+    "src/spot_perp_basis/data/final_sources.py": "7754d2c017e6c12e96e95bd8f42208c985c328e4860d681572a62b82942c9597",
+    "src/spot_perp_basis/data/funding.py": "b71f07b619d67b865c1598389612f878e739dbdd29d6e14784ecb4538d79447c",
+    "src/spot_perp_basis/data/ingest.py": "5d0ee5db001a1df8b5a136eea82c37f190a8c31abcd3be45e68fa2c543762ad5",
+    "src/spot_perp_basis/data/market.py": "dac46818affc584483ef7f87de887b9c7af4bc9b1d72cb2de2f87a9d1b88f516",
+    "src/spot_perp_basis/data/windows.py": "807b9d6b16e258175a8c86fbe6321c9fade0bc1e71923be1ecc5fbb597723b3f"
+  },
+  "independent_market_rows_checked": 12625600,
+  "minute_coverage": [
+    {
+      "cross_market_flags": 22,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 525600,
+      "paired_active": 524628,
+      "paired_valid": 525519,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 1,
+      "spot_missing": 80,
+      "symbol": "ADAUSDT",
+      "valid_inactive": 891,
+      "year": 2023
+    },
+    {
+      "cross_market_flags": 6,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 527040,
+      "paired_active": 526897,
+      "paired_valid": 527040,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 0,
+      "spot_missing": 0,
+      "symbol": "ADAUSDT",
+      "valid_inactive": 143,
+      "year": 2024
+    },
+    {
+      "cross_market_flags": 11,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 525600,
+      "paired_active": 525560,
+      "paired_valid": 525600,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 0,
+      "spot_missing": 0,
+      "symbol": "ADAUSDT",
+      "valid_inactive": 40,
+      "year": 2025
+    },
+    {
+      "cross_market_flags": 36,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 525600,
+      "paired_active": 525330,
+      "paired_valid": 525519,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 1,
+      "spot_missing": 80,
+      "symbol": "BTCUSDT",
+      "valid_inactive": 189,
+      "year": 2023
+    },
+    {
+      "cross_market_flags": 1,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 527040,
+      "paired_active": 526951,
+      "paired_valid": 527040,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 0,
+      "spot_missing": 0,
+      "symbol": "BTCUSDT",
+      "valid_inactive": 89,
+      "year": 2024
+    },
+    {
+      "cross_market_flags": 0,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 525600,
+      "paired_active": 525563,
+      "paired_valid": 525600,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 0,
+      "spot_missing": 0,
+      "symbol": "BTCUSDT",
+      "valid_inactive": 37,
+      "year": 2025
+    },
+    {
+      "cross_market_flags": 31,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 525600,
+      "paired_active": 525319,
+      "paired_valid": 525519,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 1,
+      "spot_missing": 80,
+      "symbol": "DOGEUSDT",
+      "valid_inactive": 200,
+      "year": 2023
+    },
+    {
+      "cross_market_flags": 16,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 527040,
+      "paired_active": 526950,
+      "paired_valid": 527040,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 0,
+      "spot_missing": 0,
+      "symbol": "DOGEUSDT",
+      "valid_inactive": 90,
+      "year": 2024
+    },
+    {
+      "cross_market_flags": 10,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 525600,
+      "paired_active": 525561,
+      "paired_valid": 525600,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 0,
+      "spot_missing": 0,
+      "symbol": "DOGEUSDT",
+      "valid_inactive": 39,
+      "year": 2025
+    },
+    {
+      "cross_market_flags": 55,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 525600,
+      "paired_active": 525426,
+      "paired_valid": 525519,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 1,
+      "spot_missing": 80,
+      "symbol": "ETHUSDT",
+      "valid_inactive": 93,
+      "year": 2023
+    },
+    {
+      "cross_market_flags": 2,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 527040,
+      "paired_active": 526951,
+      "paired_valid": 527040,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 0,
+      "spot_missing": 0,
+      "symbol": "ETHUSDT",
+      "valid_inactive": 89,
+      "year": 2024
+    },
+    {
+      "cross_market_flags": 7,
+      "effr_unknown": 0,
+      "funding_unknown": 0,
+      "minutes": 525600,
+      "paired_active": 525562,
+      "paired_valid": 525600,
+      "perp_invalid": 0,
+      "perp_missing": 0,
+      "spot_invalid": 0,
+      "spot_missing": 0,
+      "symbol": "ETHUSDT",
+      "valid_inactive": 38,
+      "year": 2025
+    }
+  ],
+  "minute_rows": 6312960,
+  "period": [
+    "2023-01-01T00:00:00Z",
+    "2026-01-01T00:00:00Z"
+  ],
+  "preservation": {
+    "content_changes": [],
+    "frozen_files": {
+      "configs/final_evaluation.yaml": "647fc5f3ca09b58c0a7ea74644b6316ed7eda6fd6e3ed1d741464e57d6861e21",
+      "docs/final_evaluation_freeze_receipt.md": "2a74cb15c1121f56d5cdd9e3db146c89dd299dd9ecd612f7ca3aafbad3eed2c0",
+      "docs/final_evaluation_protocol.md": "728d1596f0a219847a252de57dff72867801c090326779eedc8df11383631e26"
+    },
+    "head_index_refs_preserved": true,
+    "prior_content_hashes_checked": 21138,
+    "prior_file_states_checked": 26595,
+    "readme_preserved": true,
+    "state_changes": []
+  },
+  "publication_paths": [
+    "src/spot_perp_basis/data/final_sources.py",
+    "src/spot_perp_basis/data/final_inputs.py",
+    "scripts/prepare_final_data.py",
+    "configs/final_data_v1.json",
+    "tests/test_final_data.py",
+    "docs/final_data_reproduction.md",
+    "docs/final_data_readiness.md",
+    "docs/final_data_verification.json"
+  ],
+  "raw_outputs_remain_ignored": true,
+  "schema_version": "final-data-verification-v1",
+  "scientific_protocol": "final-survival-evaluation-v1.0.0",
+  "source_conflicts": 0,
+  "source_coverage": [
+    {
+      "asset": "BTCUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2023
+    },
+    {
+      "asset": "BTCUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2024
+    },
+    {
+      "asset": "BTCUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2025
+    },
+    {
+      "asset": "ETHUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2023
+    },
+    {
+      "asset": "ETHUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2024
+    },
+    {
+      "asset": "ETHUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2025
+    },
+    {
+      "asset": "DOGEUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2023
+    },
+    {
+      "asset": "DOGEUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2024
+    },
+    {
+      "asset": "DOGEUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2025
+    },
+    {
+      "asset": "ADAUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2023
+    },
+    {
+      "asset": "ADAUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2024
+    },
+    {
+      "asset": "ADAUSDT",
+      "funding_verified_months": 12,
+      "spot_verified_months": 12,
+      "usdm_perpetual_verified_months": 12,
+      "year": 2025
+    }
+  ],
+  "source_set_digest_encoding": "sha256(json.dumps(sorted([[source_key,sha256],...]),separators=(comma,colon)).encode()); EFFR key NYFED/EFFR/2022-12_2025-12",
+  "stage_commit_push_tag_performed": false,
+  "status": "FINAL_DATA_STRUCTURAL_QA_READY",
+  "structural_failures": [],
+  "test_source_sha256": "d257b3777c8750402ff39d9b52f987056f2523ec6bc5ce3be09eba8558b5c3d7",
+  "tests": {
+    "focused": 24,
+    "focused_elapsed_seconds": 2.347,
+    "focused_log_sha256": "278ac1b66a0fd95afda90a2ed5ddd1e5396dd1f4573153703e3d4f2adca1bbcc",
+    "portable": 286,
+    "portable_elapsed_seconds": 185.865,
+    "portable_log_sha256": "428d0d2f59d62a9821f49ba587357def3fcc24752b6ea00e48ac29c89719b78d",
+    "previous_portable_retained": 262,
+    "source_only_export": "HEAD plus exactly final_sources.py, final_inputs.py, prepare_final_data.py and final_data_v1.json; 444 synthetic sources verified offline; month ingestion/persistence/independent check; network connections denied",
+    "source_only_fixture_test": "FinalDataTests.test_source_only_export_offline_cli_and_ingestion"
+  },
+  "timestamp_conventions": {
+    "funding": "ms",
+    "internal": "UTC_ns",
+    "spot_2025": "us",
+    "spot_through_2024": "ms",
+    "usdm_perpetual": "ms"
+  },
+  "upstream_failures": 0,
+  "warmup_source_month": "2022-12",
+  "warmup_zip_files": 12,
+  "zip_files_verified": 444
+}

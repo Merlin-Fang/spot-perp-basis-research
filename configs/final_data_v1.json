@@ -1,0 +1,20 @@
+{
+  "schema_version": "final-inputs-v1",
+  "authorization": "raw_inputs_and_structural_QA_only",
+  "evaluation_authorized": false,
+  "assets": ["BTCUSDT", "ETHUSDT", "DOGEUSDT", "ADAUSDT"],
+  "start": "2023-01-01T00:00:00+00:00",
+  "end_exclusive": "2026-01-01T00:00:00+00:00",
+  "warmup_source_month": "2022-12",
+  "market": "Binance_Spot_and_USDT_M_linear_perpetual",
+  "interval": "1m",
+  "funding": "actual_official_archive_settlements",
+  "funding_predictor_delay_minutes": 1,
+  "funding_maximum_settlement_age_hours": 12,
+  "effr_percent_divisor": 100,
+  "effr_effective_date_availability_lag_days": 7,
+  "effr_day_count": "ACT/365_simple_annual_decimal",
+  "timestamp_convention": "UTC_nanoseconds_detect_source_units_per_file",
+  "missing_prices": "retain_missing_no_imputation",
+  "partition_key": "minute_bar_open_month_hourly_decision_year"
+}
