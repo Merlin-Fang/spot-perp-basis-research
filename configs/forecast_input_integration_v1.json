@@ -1,0 +1,23 @@
+{
+  "schema_version": "forecast-input-integration-v1",
+  "final_verification": {
+    "path": "docs/final_data_verification.json",
+    "sha256": "f182c5a19e20a61e4d810f6b7d750581fcc765bbb1a2dca6a4c145960f6b4610"
+  },
+  "history_dataset": {
+    "path": "manifests/five_asset_v1_dataset.json",
+    "sha256": "9e17577d8dbfc4cd12a6e92f0fd92cb7d5351c4c20a576c4336604455f67b417"
+  },
+  "history_sources": {
+    "path": "manifests/five_asset_v1_acquisition.json",
+    "sha256": "8fb74c8c3f1eb6827126066c53bc460e7a73a04c83ab2ceecebde2bca8ae59ba"
+  },
+  "historical_effr": {
+    "path": "experiments/experiment1_he2026/inputs/nyfed_effr_2020_2022.json",
+    "sha256": "6af0344471f2a652382ca2387ccd63d2d1d69f39012ec88172390db5dddd1645"
+  },
+  "historical_effr_receipt": {
+    "path": "experiments/experiment1_he2026/rate_source_receipt.json",
+    "sha256": "9c56531caaa51fde0ea657412a7a59828be1b9896eef06b885aa34118510a29f"
+  }
+}

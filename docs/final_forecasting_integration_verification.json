@@ -1,0 +1,865 @@
+{
+  "annual_midnight_handoffs_checked": 12,
+  "annual_plans": [
+    {
+      "calibration": [
+        "2022-09-01T00:00:00+00:00",
+        "2023-01-01T00:00:00+00:00"
+      ],
+      "evaluation": [
+        "2023-01-01T00:00:00+00:00",
+        "2024-01-01T00:00:00+00:00"
+      ],
+      "evaluation_origin_purge_hours": 0,
+      "fit": [
+        "2021-01-01T00:00:00+00:00",
+        "2022-09-01T00:00:00+00:00"
+      ],
+      "fit_calibration_origin_rule": "begin<=t and t+16h<end",
+      "input_publication_rule": "availability<=origin",
+      "role": "registered_calendar_only",
+      "rolling_terminal_publication_rule": "publication<origin",
+      "schedule_counts": {
+        "calibration": {
+          "clock": 2928,
+          "origin_bound_permitted": 2912
+        },
+        "evaluation": {
+          "clock": 8760,
+          "origin_bound_permitted": 8760
+        },
+        "fit": {
+          "clock": 14592,
+          "origin_bound_permitted": 14576
+        }
+      },
+      "trial_or_label_publication_rule": "publication<segment_end",
+      "warmup": [
+        "2020-12-31T00:00:00+00:00",
+        "2021-01-01T00:00:00+00:00"
+      ],
+      "year": 2023
+    },
+    {
+      "calibration": [
+        "2023-09-01T00:00:00+00:00",
+        "2024-01-01T00:00:00+00:00"
+      ],
+      "evaluation": [
+        "2024-01-01T00:00:00+00:00",
+        "2025-01-01T00:00:00+00:00"
+      ],
+      "evaluation_origin_purge_hours": 0,
+      "fit": [
+        "2022-01-01T00:00:00+00:00",
+        "2023-09-01T00:00:00+00:00"
+      ],
+      "fit_calibration_origin_rule": "begin<=t and t+16h<end",
+      "input_publication_rule": "availability<=origin",
+      "role": "registered_calendar_only",
+      "rolling_terminal_publication_rule": "publication<origin",
+      "schedule_counts": {
+        "calibration": {
+          "clock": 2928,
+          "origin_bound_permitted": 2912
+        },
+        "evaluation": {
+          "clock": 8784,
+          "origin_bound_permitted": 8784
+        },
+        "fit": {
+          "clock": 14592,
+          "origin_bound_permitted": 14576
+        }
+      },
+      "trial_or_label_publication_rule": "publication<segment_end",
+      "warmup": [
+        "2021-12-31T00:00:00+00:00",
+        "2022-01-01T00:00:00+00:00"
+      ],
+      "year": 2024
+    },
+    {
+      "calibration": [
+        "2024-09-01T00:00:00+00:00",
+        "2025-01-01T00:00:00+00:00"
+      ],
+      "evaluation": [
+        "2025-01-01T00:00:00+00:00",
+        "2026-01-01T00:00:00+00:00"
+      ],
+      "evaluation_origin_purge_hours": 0,
+      "fit": [
+        "2023-01-01T00:00:00+00:00",
+        "2024-09-01T00:00:00+00:00"
+      ],
+      "fit_calibration_origin_rule": "begin<=t and t+16h<end",
+      "input_publication_rule": "availability<=origin",
+      "role": "registered_calendar_only",
+      "rolling_terminal_publication_rule": "publication<origin",
+      "schedule_counts": {
+        "calibration": {
+          "clock": 2928,
+          "origin_bound_permitted": 2912
+        },
+        "evaluation": {
+          "clock": 8760,
+          "origin_bound_permitted": 8760
+        },
+        "fit": {
+          "clock": 14616,
+          "origin_bound_permitted": 14600
+        }
+      },
+      "trial_or_label_publication_rule": "publication<segment_end",
+      "warmup": [
+        "2022-12-31T00:00:00+00:00",
+        "2023-01-01T00:00:00+00:00"
+      ],
+      "year": 2025
+    }
+  ],
+  "authorization": "read_only_structural_input_integration_only",
+  "available_cells": 24,
+  "baseline_head": "a487769fe8e9079b699707da20595152c49f9a97",
+  "cells": [
+    {
+      "asset": "BTCUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2023
+    },
+    {
+      "asset": "BTCUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2024
+    },
+    {
+      "asset": "BTCUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2025
+    },
+    {
+      "asset": "BTCUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2023
+    },
+    {
+      "asset": "BTCUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2024
+    },
+    {
+      "asset": "BTCUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2025
+    },
+    {
+      "asset": "ETHUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2023
+    },
+    {
+      "asset": "ETHUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2024
+    },
+    {
+      "asset": "ETHUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2025
+    },
+    {
+      "asset": "ETHUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2023
+    },
+    {
+      "asset": "ETHUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2024
+    },
+    {
+      "asset": "ETHUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2025
+    },
+    {
+      "asset": "DOGEUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2023
+    },
+    {
+      "asset": "DOGEUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2024
+    },
+    {
+      "asset": "DOGEUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2025
+    },
+    {
+      "asset": "DOGEUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2023
+    },
+    {
+      "asset": "DOGEUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2024
+    },
+    {
+      "asset": "DOGEUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2025
+    },
+    {
+      "asset": "ADAUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2023
+    },
+    {
+      "asset": "ADAUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2024
+    },
+    {
+      "asset": "ADAUSDT",
+      "financing": "zero_rate",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2025
+    },
+    {
+      "asset": "ADAUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2023
+    },
+    {
+      "asset": "ADAUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2024
+    },
+    {
+      "asset": "ADAUSDT",
+      "financing": "nyfed_effr_lag7d",
+      "input_status": "available",
+      "statistical_support": "not_evaluated",
+      "year": 2025
+    }
+  ],
+  "effr_overlap_records_checked": 21,
+  "environment": {
+    "PyYAML": "6.0.3",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "pyarrow": "26.0.0",
+    "python": "3.14.7"
+  },
+  "feature_order": [
+    "rho",
+    "abs_rho",
+    "proposed_direction",
+    "low_fee_margin",
+    "rho_change1",
+    "rho_minus_mean24"
+  ],
+  "final_data_milestone_committed": true,
+  "final_raw_archives_verified": 444,
+  "final_source_set_sha256": "fe8c826cc8c29f92d6daa5339fe5e438e266eabd9e1cff538517abae649e1997",
+  "funding_overlap_events_checked": 372,
+  "historical_config_sha256": "f5d82d4931c6efcc2f5b93b75d72269e36a82ec017ee6470d0c85ad6e76c9174",
+  "historical_dependency_files": 708,
+  "historical_quality": [
+    {
+      "asset": "BTCUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 0
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 8760,
+          "valid_inactive_pairs": 2
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 17,
+          "present_clock": 14592,
+          "valid_inactive_pairs": 3
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2023
+    },
+    {
+      "asset": "BTCUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 1
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 8784,
+          "valid_inactive_pairs": 1
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 14592,
+          "valid_inactive_pairs": 2
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2024
+    },
+    {
+      "asset": "BTCUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 1
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 8760,
+          "valid_inactive_pairs": 0
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 14616,
+          "valid_inactive_pairs": 2
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2025
+    },
+    {
+      "asset": "ETHUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 0
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 8760,
+          "valid_inactive_pairs": 1
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 17,
+          "present_clock": 14592,
+          "valid_inactive_pairs": 3
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2023
+    },
+    {
+      "asset": "ETHUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 0
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 8784,
+          "valid_inactive_pairs": 1
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 14592,
+          "valid_inactive_pairs": 2
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2024
+    },
+    {
+      "asset": "ETHUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 1
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 8760,
+          "valid_inactive_pairs": 0
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 14616,
+          "valid_inactive_pairs": 1
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2025
+    },
+    {
+      "asset": "DOGEUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 1
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 8760,
+          "valid_inactive_pairs": 5
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 17,
+          "present_clock": 14592,
+          "valid_inactive_pairs": 4
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2023
+    },
+    {
+      "asset": "DOGEUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 2
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 8784,
+          "valid_inactive_pairs": 1
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 14592,
+          "valid_inactive_pairs": 5
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2024
+    },
+    {
+      "asset": "DOGEUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 1
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 8760,
+          "valid_inactive_pairs": 0
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 14616,
+          "valid_inactive_pairs": 5
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2025
+    },
+    {
+      "asset": "ADAUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 1
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 8760,
+          "valid_inactive_pairs": 22
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 17,
+          "present_clock": 14592,
+          "valid_inactive_pairs": 3
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2023
+    },
+    {
+      "asset": "ADAUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 8
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 8784,
+          "valid_inactive_pairs": 4
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 14592,
+          "valid_inactive_pairs": 16
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2024
+    },
+    {
+      "asset": "ADAUSDT",
+      "stages": {
+        "calibration": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 2928,
+          "valid_inactive_pairs": 3
+        },
+        "evaluation": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 8760,
+          "valid_inactive_pairs": 0
+        },
+        "fit": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 2,
+          "present_clock": 14616,
+          "valid_inactive_pairs": 23
+        },
+        "warmup": {
+          "financing_unknown": 0,
+          "funding_unknown": 0,
+          "missing_or_invalid_pairs": 0,
+          "present_clock": 24,
+          "valid_inactive_pairs": 0
+        }
+      },
+      "year": 2025
+    }
+  ],
+  "historical_raw_archives_verified": 300,
+  "hourly_partitions_checked": 112,
+  "initial_diagnostic": "results/final_forecasting_integration_preflight/input_readiness.json",
+  "input_catalog": {
+    "final_verification": {
+      "path": "docs/final_data_verification.json",
+      "sha256": "f182c5a19e20a61e4d810f6b7d750581fcc765bbb1a2dca6a4c145960f6b4610"
+    },
+    "historical_effr": {
+      "path": "experiments/experiment1_he2026/inputs/nyfed_effr_2020_2022.json",
+      "sha256": "6af0344471f2a652382ca2387ccd63d2d1d69f39012ec88172390db5dddd1645"
+    },
+    "historical_effr_receipt": {
+      "path": "experiments/experiment1_he2026/rate_source_receipt.json",
+      "sha256": "9c56531caaa51fde0ea657412a7a59828be1b9896eef06b885aa34118510a29f"
+    },
+    "history_dataset": {
+      "path": "manifests/five_asset_v1_dataset.json",
+      "sha256": "9e17577d8dbfc4cd12a6e92f0fd92cb7d5351c4c20a576c4336604455f67b417"
+    },
+    "history_sources": {
+      "path": "manifests/five_asset_v1_acquisition.json",
+      "sha256": "8fb74c8c3f1eb6827126066c53bc460e7a73a04c83ab2ceecebde2bca8ae59ba"
+    },
+    "schema_version": "forecast-input-integration-v1"
+  },
+  "input_versions": [
+    "five-asset-observations-v1",
+    "final-inputs-v1"
+  ],
+  "model_registry": [
+    "raw_tree",
+    "raw_matched_logistic",
+    "unconditional_KM",
+    "magnitude_KM",
+    "rolling_magnitude_KM",
+    "raw_coarse_logistic",
+    "calibrated_tree",
+    "calibrated_matched_logistic",
+    "calibrated_coarse_logistic"
+  ],
+  "neutral_defect_fixed": "historical cache aliases retain original filenames; checksum filename now compared against official URL basename with unchanged byte/hash checks",
+  "preservation": {
+    "content_or_state_changes": [],
+    "head_index_refs_unchanged": true,
+    "prior_content_hashes_checked": 21146,
+    "prior_file_states_checked": 28116,
+    "readonly_report_content_and_mtime_idempotent": true,
+    "report_sha256": "af7e33ab70815d31ee2a5d66c71595d9852b2ccbc9b24cc7733e0a10ffaa5a85"
+  },
+  "prohibited_actions": {
+    "download_or_dataset_rebuild": false,
+    "economic_backtest": false,
+    "final_features": false,
+    "final_fitting_or_calibration": false,
+    "final_forecasts": false,
+    "final_labels_or_risk_trials": false,
+    "final_scoring_or_uncertainty": false,
+    "frozen_flags_or_guards_changed": false,
+    "stage_commit_push_tag": false
+  },
+  "protocol": "final-survival-evaluation-v1.0.0",
+  "publication_paths": [
+    "src/spot_perp_basis/data/forecast_inputs.py",
+    "src/spot_perp_basis/data/input_preflight.py",
+    "scripts/preflight_final_integration.py",
+    "configs/forecast_input_integration_v1.json",
+    "tests/test_final_input_integration.py",
+    "docs/final_forecasting_integration_preflight.md",
+    "docs/final_forecasting_integration_verification.json"
+  ],
+  "remaining_gate": "separate authorization and explicitly gated final numerical execution; existing final-year guards intentionally still reject",
+  "requested_cells": 24,
+  "runtime": {
+    "first_elapsed_seconds": 10.78,
+    "first_maximum_rss_kib": 402800,
+    "rerun_elapsed_seconds": 10.73,
+    "rerun_maximum_rss_kib": 411908
+  },
+  "schema_version": "final-forecasting-integration-verification-v1",
+  "source_config_test_sha256": {
+    "configs/final_evaluation.yaml": "647fc5f3ca09b58c0a7ea74644b6316ed7eda6fd6e3ed1d741464e57d6861e21",
+    "configs/forecast_input_integration_v1.json": "18b12a7c817052c7035cae05c22af42504d6e1e43fe2460ba25c9fd96d1ffa23",
+    "docs/final_evaluation_freeze_receipt.md": "2a74cb15c1121f56d5cdd9e3db146c89dd299dd9ecd612f7ca3aafbad3eed2c0",
+    "docs/final_evaluation_protocol.md": "728d1596f0a219847a252de57dff72867801c090326779eedc8df11383631e26",
+    "docs/final_forecasting_integration_preflight.md": "070d15838a002f6d2f7630b11fa34a8183c4c63f264bf4377079a93deb8c8477",
+    "requirements-build-lock.txt": "281e9d3576e7a123def112f3107c7f32579dd57fe41d7e91aa6e9719a5769d52",
+    "requirements-lock.txt": "8659c27688a1061cea4073e481823c34ab9d6f0b964f513b6d1856539a3562be",
+    "scripts/preflight_final_integration.py": "7529b6c0a590ad172a2018f81184417b8f3069980652f503a7d331ece5aed68b",
+    "src/spot_perp_basis/data/features.py": "a09b6be619f2c9856049d24f95abc265ce6294aa9c0065a0ed9551796684d2fd",
+    "src/spot_perp_basis/data/final_inputs.py": "526bf7f7490a77bfa44b795166a63c88f59423a161c08f77551df00b7e011f0c",
+    "src/spot_perp_basis/data/final_sources.py": "7754d2c017e6c12e96e95bd8f42208c985c328e4860d681572a62b82942c9597",
+    "src/spot_perp_basis/data/forecast_inputs.py": "6a03f7be8ec9bdf87969da8b7aba9ac2cd12c1665c0271423ff67f8519b6b787",
+    "src/spot_perp_basis/data/funding.py": "b71f07b619d67b865c1598389612f878e739dbdd29d6e14784ecb4538d79447c",
+    "src/spot_perp_basis/data/ingest.py": "5d0ee5db001a1df8b5a136eea82c37f190a8c31abcd3be45e68fa2c543762ad5",
+    "src/spot_perp_basis/data/input_preflight.py": "59421560130d66591b08a66e8b89ea01d21064b0b94ded5ffcb10472684f1cfc",
+    "src/spot_perp_basis/data/labels.py": "ced5b91d3a3df384232956856a5a65bacab1c90a66e7e234e2c49e35520b7dc9",
+    "src/spot_perp_basis/data/market.py": "dac46818affc584483ef7f87de887b9c7af4bc9b1d72cb2de2f87a9d1b88f516",
+    "src/spot_perp_basis/data/windows.py": "807b9d6b16e258175a8c86fbe6321c9fade0bc1e71923be1ecc5fbb597723b3f",
+    "src/spot_perp_basis/training/annual.py": "3e3466b8e1f82add9d950a7a41a5f0205db01be8ec13a8aead3c52928ff83d36",
+    "src/spot_perp_basis/training/checkpoints.py": "f8bb392c0665581769e6839cb8f119fef73ba36bbce7893fb4879318afe43124",
+    "src/spot_perp_basis/training/fit.py": "2c2693eb4241f52902146e43d02d0071c6a5a62698b945fb084fbeec1cf590e6",
+    "src/spot_perp_basis/training/operational.py": "40a9f59c85f608d98eac8a6d460da15dec36e64de68d21d301d565f9e01519ed",
+    "tests/test_final_input_integration.py": "a6e085752e3bae5b0be130ee54dee03536abe8cc25c57c336081d6b4ddd09e13"
+  },
+  "statistical_support": "not_evaluated",
+  "status": "FINAL_FORECASTING_INPUT_INTEGRATION_READY",
+  "tests": {
+    "existing_archival_tests_omitted_unchanged": 3,
+    "final_numerical_access_rejections": [
+      "fitting",
+      "feature_builder",
+      "first_passage_labels",
+      "forecasting",
+      "scoring"
+    ],
+    "focused_elapsed_seconds": 57.783,
+    "focused_log_sha256": "bdab8d7b528cd845cc0a55ed214f60363716001650e03a3a6ed2c7b3a4fdbad5",
+    "focused_passed": 31,
+    "portable_elapsed_seconds": 255.673,
+    "portable_log_sha256": "120a1b6a6f87ef6815320907cd1aa827c68283f4cdb70fdcfb2664a7617df099",
+    "portable_passed": 317,
+    "previous_portable_retained": 286,
+    "source_only_export": "HEAD plus exactly two integration modules, CLI and input catalog; external synthetic bundle; network denied; same CLI; no real holdout"
+  },
+  "timestamp_conventions": {
+    "funding": "ms",
+    "internal": "UTC_ns",
+    "spot_2025": "us",
+    "spot_through_2024": "ms",
+    "usdm_perpetual": "ms"
+  },
+  "unavailable_cells": 0,
+  "unresolved_input_blockers": [],
+  "verified_report": {
+    "path": "results/final_forecasting_integration_preflight/verified_input_readiness.json",
+    "sha256": "af7e33ab70815d31ee2a5d66c71595d9852b2ccbc9b24cc7733e0a10ffaa5a85"
+  }
+}
