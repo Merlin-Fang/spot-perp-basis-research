@@ -1,0 +1,1016 @@
+{
+  "answers": {
+    "A": "Engineering-complete for the requested development-only operational forecasting path; not final-data/execution certified.",
+    "B": [
+      "Explicit final-data access/acquisition and structural-QA authorization.",
+      "Verified real four-asset spot/perpetual/funding and EFFR coverage, publication clocks, warmup, source hashes and calendar handoffs.",
+      "Narrowly authorized final-period IO activation and integration checks; existing development guards remain intact.",
+      "Separate authorization for final-year fitting/forecasts/labels/scoring execution. Financial replay remains a separate scope."
+    ],
+    "C": [
+      "Pin this verified code/artifacts.",
+      "Authorize and complete bounded final-data acquisition/structural QA.",
+      "Connect only approved frozen partitions and verify IO/calendar/source boundaries without outcome-driven selection.",
+      "Obtain final-execution authorization and run the fixed annual forecast/storage/scoring protocol; no new model search."
+    ]
+  },
+  "artifacts_sha256": {
+    "docs/forecasting_operational_preflight.md": "4d2d22ba0eaa1211e5798d4221f71954ce90ee7778ef5cf9abada42e8a0ce3a2",
+    "results/forecasting_operational_preflight/summary.json": "f1f5563e458d0bfe1720d97e3568cadf4d90142231a7c8a42ea853ce87ad40f2",
+    "scripts/preflight_forecasting_operations.py": "198b74b190ddca4ec4c48ab02dc34f2dd13f95c134c81930eb34146dff67d4e4",
+    "src/spot_perp_basis/training/checkpoints.py": "f8bb392c0665581769e6839cb8f119fef73ba36bbce7893fb4879318afe43124",
+    "src/spot_perp_basis/training/operational.py": "40a9f59c85f608d98eac8a6d460da15dec36e64de68d21d301d565f9e01519ed",
+    "tests/test_annual_operational.py": "e46575a91cd6bbfa4304387cfbdf8560668a212a270dea4ef6b74cfcb816314c"
+  },
+  "commands": {
+    "end_to_end": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B -m scripts.preflight_forecasting_operations --write-report",
+    "focused": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B -m unittest discover -s tests -p test_annual_operational.py -v",
+    "portable": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B -m scripts.test_portable"
+  },
+  "end_to_end": {
+    "annual_availability": [
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_tree",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_matched_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "unconditional_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "magnitude_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "dynamic",
+        "diagnostic": "causal_dynamic_reference",
+        "financing": "zero_rate",
+        "model": "rolling_magnitude_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_coarse_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_tree",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_matched_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_coarse_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_tree",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_matched_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "unconditional_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "magnitude_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "dynamic",
+        "diagnostic": "causal_dynamic_reference",
+        "financing": "zero_rate",
+        "model": "rolling_magnitude_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_coarse_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_tree",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_matched_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_coarse_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_tree",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_matched_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "unconditional_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "magnitude_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "dynamic",
+        "diagnostic": "causal_dynamic_reference",
+        "financing": "zero_rate",
+        "model": "rolling_magnitude_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_coarse_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_tree",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_matched_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_coarse_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_tree",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_matched_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "unconditional_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "magnitude_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "dynamic",
+        "diagnostic": "causal_dynamic_reference",
+        "financing": "zero_rate",
+        "model": "rolling_magnitude_KM",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_coarse_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_tree",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_matched_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_coarse_logistic",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      }
+    ],
+    "annual_forecasts_sha256": "2eb5fd11ccc3b8c554a0c724656ef69abdfe493703ab93dfd0d7c2276362e32a",
+    "canonical_score_sha256": "9d883cc82596a9ffe5326c6297fa7bb8e83145e487e2bdb2f9f26fbcb7859491",
+    "canonical_scoring_exact": true,
+    "checkpoint_path": "results/forecasting_operational_preflight/bb93b626d85bd4628fe2f96d998661c02e6195bfc218a224a32fa15f1c42108b/annual_2022_zero_rate.checkpoint.json",
+    "checkpoint_sha256": "f6cfa10f70239252187d5f4a8dbacfa3698ed064a698286cfd195b8c184d648b",
+    "completed": [
+      {
+        "begin": "2022-01-01T00:00:00+00:00",
+        "end": "2022-02-01T00:00:00+00:00",
+        "sha256": "9592a56e12a64bd13a59218f09f3261172c826fdece2917e1361baa307ddd992"
+      },
+      {
+        "begin": "2022-02-01T00:00:00+00:00",
+        "end": "2022-03-01T00:00:00+00:00",
+        "sha256": "f01ac23991bd11cde8817a21274a36e71c945b6a477d0f11a01707e64fd35655"
+      },
+      {
+        "begin": "2022-03-01T00:00:00+00:00",
+        "end": "2022-04-01T00:00:00+00:00",
+        "sha256": "f90247fd90383f5c42eb26a7540df7a356d4d626233c44f17de085cac41ddf4e"
+      },
+      {
+        "begin": "2022-04-01T00:00:00+00:00",
+        "end": "2022-05-01T00:00:00+00:00",
+        "sha256": "89b2a5021307d7b3607d313061f4693e9e965b1988a67f3a119f5a0ba1c89930"
+      },
+      {
+        "begin": "2022-05-01T00:00:00+00:00",
+        "end": "2022-06-01T00:00:00+00:00",
+        "sha256": "3346dfd635a933d2e98ca472e1a84c0c0ab350fa9ce0a7f5e1dccfcdc381aa0a"
+      },
+      {
+        "begin": "2022-06-01T00:00:00+00:00",
+        "end": "2022-07-01T00:00:00+00:00",
+        "sha256": "7e6ca266fbf7e1f0ba51a4d1a09980efd06a02bf7dbb3a91ad864f5a9e1680c0"
+      },
+      {
+        "begin": "2022-07-01T00:00:00+00:00",
+        "end": "2022-08-01T00:00:00+00:00",
+        "sha256": "cabb1c12b68cb9aa80659fbf27cba1722855df5f7e9468e53a66c1b428241487"
+      },
+      {
+        "begin": "2022-08-01T00:00:00+00:00",
+        "end": "2022-09-01T00:00:00+00:00",
+        "sha256": "5a63575ee570bc72f7730aa18381842987d5d52238422f29b007bcc491b7886a"
+      },
+      {
+        "begin": "2022-09-01T00:00:00+00:00",
+        "end": "2022-10-01T00:00:00+00:00",
+        "sha256": "5cae7de6e23bf575fbf97c409ac25a51fd6bf868c9eb2d45424e394182c75606"
+      },
+      {
+        "begin": "2022-10-01T00:00:00+00:00",
+        "end": "2022-11-01T00:00:00+00:00",
+        "sha256": "2c596cffceb399c0c1d136c08f28446a7aa02393bdb224b81299a08cd7ae6849"
+      },
+      {
+        "begin": "2022-11-01T00:00:00+00:00",
+        "end": "2022-12-01T00:00:00+00:00",
+        "sha256": "c182f3bf198846db86d55bdf05fcd123dce0f7333b519b59af3098160b7c0ad0"
+      },
+      {
+        "begin": "2022-12-01T00:00:00+00:00",
+        "end": "2023-01-01T00:00:00+00:00",
+        "sha256": "59a2ea8a0becf7ae66cec7117f2ecd1ac6a8701e0d6de3593840baea5c2b0e86"
+      }
+    ],
+    "forecast_exact": true,
+    "forecast_frame_identity": {
+      "columns": [
+        [
+          "symbol",
+          "str"
+        ],
+        [
+          "financing",
+          "str"
+        ],
+        [
+          "evaluation_year",
+          "int64"
+        ],
+        [
+          "origin_time_utc",
+          "datetime64[us, UTC]"
+        ],
+        [
+          "horizon_hours",
+          "int64"
+        ],
+        [
+          "model",
+          "str"
+        ],
+        [
+          "raw_event_probability",
+          "float64"
+        ],
+        [
+          "event_probability",
+          "float64"
+        ],
+        [
+          "forecast_available_at_utc",
+          "datetime64[us, UTC]"
+        ],
+        [
+          "fit_cutoff_utc",
+          "datetime64[us, UTC]"
+        ],
+        [
+          "calibration_cutoff_utc",
+          "datetime64[us, UTC]"
+        ],
+        [
+          "snapshot_sha256",
+          "str"
+        ],
+        [
+          "origin_features_available",
+          "bool"
+        ],
+        [
+          "low_fee_qualified",
+          "bool"
+        ],
+        [
+          "model_support_status",
+          "str"
+        ],
+        [
+          "calibration_status",
+          "str"
+        ],
+        [
+          "calibration_source",
+          "str"
+        ],
+        [
+          "forecast_status",
+          "str"
+        ],
+        [
+          "rolling_latest_record_publication_utc",
+          "object"
+        ]
+      ],
+      "index_dtype": "int64",
+      "index_frequency": null,
+      "index_name": null,
+      "rows": 315360,
+      "sha256": "d815dd41712d096241fc6f698656c4710eebb793f0a3a124ddaa5bf1c57ca094"
+    },
+    "forecast_rows": 315360,
+    "interruption_progress_sha256": "7c65583585dc0df253228651517c2b111f20295948ffaca1eb890a34c73cd427",
+    "matches_prior_synthetic_snapshot": true,
+    "primary_scoring_asset_origins": 24749,
+    "progress_sha256": "cbd80556c41a1d0c16c54f0d4839b048ef2b42137c838356fdebc3cf8af30413",
+    "resumed_at": "2022-07-01T00:00:00+00:00",
+    "retained_context_memory_bytes": 5997312,
+    "scheduled_asset_origins": 35040,
+    "scope": "synthetic_2020_2022_zero_rate_only",
+    "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+    "store_path": "results/forecasting_operational_preflight/bb93b626d85bd4628fe2f96d998661c02e6195bfc218a224a32fa15f1c42108b/store",
+    "stored_outcomes_exact": true
+  },
+  "final_evaluation_ready": false,
+  "final_execution_enabled": false,
+  "idempotence": {
+    "after_state_manifest_sha256": "44a87898a2ac7eb873299bfead696bd62fe1cba2473b1c4b5a97f3560b9c643a",
+    "before_state_manifest_sha256": "44a87898a2ac7eb873299bfead696bd62fe1cba2473b1c4b5a97f3560b9c643a",
+    "complete_runner_rerun_passed": true,
+    "content_and_mtime_all_unchanged": true,
+    "current_version_output_files": 48,
+    "output_bytes": 21346652,
+    "semantics": "Immutable content-addressed blobs; progress pin commits exact contiguous published chunks before resume."
+  },
+  "limitations": [
+    "Only synthetic zero-financing annual integration is exercised here; no final-year model/data support is certified.",
+    "Same pinned runtime/Arrow environment; cross-version/platform equivalence is not certified.",
+    "Full hourly history is replayed at chunk boundaries; CPU work and full-year scoring memory are bounded but not constant.",
+    "Final-period activation and actual source QA require authorization; the current development guards still reject final-year numerical IO.",
+    "Hour-versus-minute first-passage and last-trade measurement limitations remain."
+  ],
+  "omitted_unnecessary_features": [
+    "Second incremental KM/label engine",
+    "Context pruning that can alter open paths or rolling numerical history",
+    "Database, distributed queue or live service",
+    "Resuming within the short fixed annual optimizer",
+    "General-purpose data loader or model framework"
+  ],
+  "operational_binding": {
+    "model_binding": {
+      "environment": {
+        "numpy": "2.5.4",
+        "pandas": "3.0.6",
+        "python": "3.14.7"
+      },
+      "frozen_sha256": {
+        "configs/final_evaluation.yaml": "647fc5f3ca09b58c0a7ea74644b6316ed7eda6fd6e3ed1d741464e57d6861e21",
+        "docs/final_evaluation_freeze_receipt.md": "2a74cb15c1121f56d5cdd9e3db146c89dd299dd9ecd612f7ca3aafbad3eed2c0",
+        "docs/final_evaluation_protocol.md": "728d1596f0a219847a252de57dff72867801c090326779eedc8df11383631e26"
+      },
+      "implementation_sha256": {
+        "data/features.py": "a09b6be619f2c9856049d24f95abc265ce6294aa9c0065a0ed9551796684d2fd",
+        "data/labels.py": "ced5b91d3a3df384232956856a5a65bacab1c90a66e7e234e2c49e35520b7dc9",
+        "data/windows.py": "807b9d6b16e258175a8c86fbe6321c9fade0bc1e71923be1ecc5fbb597723b3f",
+        "evaluation/metrics.py": "d2ba0897726e63bba2d5d047dd060b4b2ff5ef56dcb82dc4fc5d24f10f465122",
+        "evaluation/statistics.py": "0ea726832212c0de211d22c31e5bf9315a00acd4c940c9cdab8e9c8421d0669e",
+        "evaluation/survival_audit.py": "e7e58aaf1b2bfed712f6eca87ada9c3911fa61d0c13907a32d7daa4d780baebd",
+        "models/calibration.py": "29b2e465825fc9ef5d6ca8ba65b7a4356a9f2bfdccab7674b5a2cdfe651bdd40",
+        "models/logistic.py": "d98d6af1c46479d35471f690863de1de306043c37c122338718cb1a42d1a6649",
+        "models/survival.py": "110b13146759e8f879ea716810367c323aa2ba1df2f0ade315fc9eea7b5f5044",
+        "models/trees.py": "356eec63ee8432760749b0a98039d17cf9df67637459aed394007da745503417",
+        "theory.py": "04ad5b8fc99f7565f9730dc5968897c53fa2df34d420d8a3c92c6022c64998aa",
+        "training/annual.py": "3e3466b8e1f82add9d950a7a41a5f0205db01be8ec13a8aead3c52928ff83d36",
+        "training/checkpoints.py": "f8bb392c0665581769e6839cb8f119fef73ba36bbce7893fb4879318afe43124",
+        "training/fit.py": "2c2693eb4241f52902146e43d02d0071c6a5a62698b945fb084fbeec1cf590e6"
+      }
+    },
+    "operations_sha256": "40a9f59c85f608d98eac8a6d460da15dec36e64de68d21d301d565f9e01519ed",
+    "pyarrow": "26.0.0"
+  },
+  "preservation": {
+    "Git_HEAD_refs_remotes_staged_entries_index_bytes": "unchanged",
+    "data_states_unchanged": 3180,
+    "experiments_states_unchanged": 22876,
+    "frozen_authority_sha256": {
+      "configs/final_evaluation.yaml": "647fc5f3ca09b58c0a7ea74644b6316ed7eda6fd6e3ed1d741464e57d6861e21",
+      "docs/final_evaluation_freeze_receipt.md": "2a74cb15c1121f56d5cdd9e3db146c89dd299dd9ecd612f7ca3aafbad3eed2c0",
+      "docs/final_evaluation_protocol.md": "728d1596f0a219847a252de57dff72867801c090326779eedc8df11383631e26"
+    },
+    "git_index_sha256": "881a258c9ef5536be56e4f8c0c292fa14f61353a7ad9df3c1aede55784f892ae",
+    "market_historical_results": "metadata_only_no_content_read_or_hash",
+    "necessary_existing_code_fix": {
+      "after_sha256": "f8bb392c0665581769e6839cb8f119fef73ba36bbce7893fb4879318afe43124",
+      "before_sha256": "2fbb4e163cf60ea188ca725c8d94d0ad1bfae277f56a3efe2a8e97b99b96e8fa",
+      "change": "scoring_status is model-specific; shared label-copy equality excludes it; existing per-row scoring-status validation unchanged",
+      "path": "src/spot_perp_basis/training/checkpoints.py",
+      "single_exact_patch_verified": true
+    },
+    "prior_file_states_unchanged": 26449,
+    "prior_safe_source_document_hashes_unchanged": 149,
+    "results_states_unchanged": 115,
+    "scientific_algorithms_features_model_parameters_calibration_scoring_rules": "unchanged"
+  },
+  "protocol": "final-survival-evaluation-v1.0.0",
+  "resolved_validation_edges": [
+    "Model-specific scoring statuses differ legitimately across models.",
+    "Preserve DatetimeIndex frequency in Parquet metadata; null rolling publication is valid for frozen fallback.",
+    "Use the annual decision clock for chunk outputs even when observations use nanosecond datetime units."
+  ],
+  "runtime": {
+    "completed_run_repeat": {
+      "elapsed_seconds": 138.9524072669883,
+      "peak_rss_bytes": 1356873728
+    },
+    "first_completed_final_build": {
+      "elapsed_seconds": 138.59294084600697,
+      "peak_rss_bytes": 1312215040
+    },
+    "notes": "Linux peak RSS includes simultaneous oracle/resumed/labeled tables and validation; not a constant-memory production claim. Timings are observations, not thresholds."
+  },
+  "scope_guards": {
+    "Git_staging_commit_push": false,
+    "financial_trading_experiments": false,
+    "frozen_protocol_config_change": false,
+    "market_or_EFFR_downloads": false,
+    "model_tuning_or_new_architecture": false,
+    "next_task_started": false,
+    "real_2023_2025_contents_read_inspected_hashed_evaluated": false
+  },
+  "status": "FORECASTING_OPERATIONAL_PREFLIGHT_VERIFIED",
+  "tests": {
+    "focused": {
+      "log_sha256": "94c645eab423452e5e6a8621ac58a2742080185cdd745f53768f74ecbc5c81b2",
+      "passed": 19
+    },
+    "fresh_Python_process_resume": "passed",
+    "new_operational_tests": 19,
+    "portable": {
+      "log_sha256": "08fec1934c71e2837d89250e9a54653b431e0a60a65d16003b8f1242202ed75e",
+      "passed": 262
+    },
+    "prior_portable_tests_preserved": 243,
+    "unchanged_archival_hash_tests_not_in_portable_runner": 3
+  },
+  "unresolved_verification_failures": [],
+  "unsupported_cases": {
+    "annual_availability": [
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_tree",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_matched_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "unconditional_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "magnitude_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "dynamic",
+        "diagnostic": "causal_dynamic_reference",
+        "financing": "zero_rate",
+        "model": "rolling_magnitude_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_coarse_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_tree",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_matched_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_coarse_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_tree",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_matched_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "unconditional_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "magnitude_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "dynamic",
+        "diagnostic": "causal_dynamic_reference",
+        "financing": "zero_rate",
+        "model": "rolling_magnitude_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_coarse_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_tree",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_matched_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_coarse_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_tree",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_matched_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "unconditional_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "magnitude_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "dynamic",
+        "diagnostic": "causal_dynamic_reference",
+        "financing": "zero_rate",
+        "model": "rolling_magnitude_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_coarse_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "unavailable",
+        "diagnostic": "unsupported_calibration_numerical",
+        "financing": "zero_rate",
+        "model": "calibrated_tree",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_matched_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_coarse_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_tree",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "unavailable",
+        "diagnostic": "unsupported_numerical_nonconvergence",
+        "financing": "zero_rate",
+        "model": "raw_matched_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "unconditional_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "magnitude_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "dynamic",
+        "diagnostic": "causal_dynamic_reference",
+        "financing": "zero_rate",
+        "model": "rolling_magnitude_KM",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "raw_coarse_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_tree",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "unavailable",
+        "diagnostic": "unsupported_parent_fit",
+        "financing": "zero_rate",
+        "model": "calibrated_matched_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      },
+      {
+        "availability": "available",
+        "diagnostic": "fit",
+        "financing": "zero_rate",
+        "model": "calibrated_coarse_logistic",
+        "snapshot_sha256": "4ffeeed4a8f6903ed65fbe31d0ac944a504341b79e62edd9876f35216cd60349",
+        "symbol": "ADAUSDT",
+        "year": 2022
+      }
+    ],
+    "equal_asset_status": {
+      "financing": "zero_rate",
+      "gain": null,
+      "missing_cells": [
+        [
+          "ADAUSDT",
+          2022
+        ]
+      ],
+      "required_cells": 4,
+      "status": "unavailable_required_cell",
+      "weight_per_cell": 0.25
+    },
+    "forecast_rows": 2592,
+    "resume_sha256": "05cafde9b39a14795a1cb42067ca5242d894d90270b2015ab81f998abd06fcc4",
+    "scope": "synthetic_72h_optimizer_failures",
+    "table_sha256": "293a1137245c19e2c93084d114d311fe2e9b6f91aaa66933df626b078d1aa866",
+    "unavailable_models": [
+      {
+        "annual_diagnostic": "unsupported_calibration_numerical",
+        "cell_status": "unavailable_annual_model",
+        "forecast_origins": 0,
+        "ipcw_brier": null,
+        "model": "calibrated_tree",
+        "symbol": "DOGEUSDT"
+      },
+      {
+        "annual_diagnostic": "unsupported_numerical_nonconvergence",
+        "cell_status": "unavailable_annual_model",
+        "forecast_origins": 0,
+        "ipcw_brier": null,
+        "model": "raw_matched_logistic",
+        "symbol": "ADAUSDT"
+      },
+      {
+        "annual_diagnostic": "unsupported_parent_fit",
+        "cell_status": "unavailable_annual_model",
+        "forecast_origins": 0,
+        "ipcw_brier": null,
+        "model": "calibrated_matched_logistic",
+        "symbol": "ADAUSDT"
+      }
+    ]
+  }
+}

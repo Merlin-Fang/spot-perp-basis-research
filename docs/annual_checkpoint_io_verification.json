@@ -1,0 +1,458 @@
+{
+  "artifacts_sha256": {
+    "docs/annual_checkpoint_io_preflight.md": "d393f6a3fbdf4f82abbe92287ea251f53d11cff715c22753ee205c2280cb98df",
+    "results/annual_checkpoint_io_preflight/checkpoints/e5d1c690f3f74866e4149519ae98eeb4eb44317289681bf55ba3fdbcfebfd9fd/annual_2022_zero_rate.checkpoint.json": "8a4728ebfc2ee7150e882f7daceb479249f33ce217c000ba36bad7c6bd332f06",
+    "results/annual_checkpoint_io_preflight/summary.json": "5aafcbdd6a9ebbe5e970c4ace52430dbf8487ce07cac5ad514d59ec883ea83a5",
+    "scripts/preflight_annual_checkpoint_io.py": "49e2ab2613b07d61a46e0a2874d69affbe26b6e699d2829a2721b9486ded883f",
+    "src/spot_perp_basis/training/checkpoints.py": "2fbb4e163cf60ea188ca725c8d94d0ad1bfae277f56a3efe2a8e97b99b96e8fa",
+    "tests/test_annual_checkpoint_io.py": "848a044576247e41d9b78f89af9c7ad339d9eebf9ad874da8db722d9e3b0197b"
+  },
+  "changes": {
+    "core_interfaces": [
+      "checkpoint_provenance",
+      "implementation_binding",
+      "checkpoint_bytes",
+      "save_checkpoint",
+      "load_checkpoint",
+      "validate_contexts",
+      "validate_forecasts"
+    ],
+    "existing_files_modified": [],
+    "new_maintained_artifacts": [
+      "src/spot_perp_basis/training/checkpoints.py",
+      "tests/test_annual_checkpoint_io.py",
+      "scripts/preflight_annual_checkpoint_io.py",
+      "docs/annual_checkpoint_io_preflight.md",
+      "docs/annual_checkpoint_io_verification.json"
+    ]
+  },
+  "commands": {
+    "focused": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B -m unittest discover -s tests -p test_annual_checkpoint_io.py -v",
+    "portable": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B -m scripts.test_portable",
+    "preflight": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B -m scripts.preflight_annual_checkpoint_io --write-report"
+  },
+  "demonstration": {
+    "attached_contract": {
+      "asset_origins": 35040,
+      "attached": true,
+      "models": 9,
+      "rows": 315360,
+      "status": "valid"
+    },
+    "checkpoint_bytes": 476981,
+    "checkpoint_path": "results/annual_checkpoint_io_preflight/checkpoints/e5d1c690f3f74866e4149519ae98eeb4eb44317289681bf55ba3fdbcfebfd9fd/annual_2022_zero_rate.checkpoint.json",
+    "checkpoint_sha256": "8a4728ebfc2ee7150e882f7daceb479249f33ce217c000ba36bad7c6bd332f06",
+    "financing": "zero_rate",
+    "input_contract": {
+      "assets": [
+        "BTCUSDT",
+        "ETHUSDT",
+        "DOGEUSDT",
+        "ADAUSDT"
+      ],
+      "evaluation_year": 2022,
+      "status": "valid"
+    },
+    "model_registry": [
+      "raw_tree",
+      "raw_matched_logistic",
+      "unconditional_KM",
+      "magnitude_KM",
+      "rolling_magnitude_KM",
+      "raw_coarse_logistic",
+      "calibrated_tree",
+      "calibrated_matched_logistic",
+      "calibrated_coarse_logistic"
+    ],
+    "output_contract": {
+      "asset_origins": 35040,
+      "attached": false,
+      "models": 9,
+      "rows": 315360,
+      "status": "valid"
+    },
+    "parity": {
+      "canonical_scoring_identical": true,
+      "forecast_frame_sha256": "d815dd41712d096241fc6f698656c4710eebb793f0a3a124ddaa5bf1c57ca094",
+      "full_forecast_frame_exact": true,
+      "label_attachment_preserves_issuance": true,
+      "maximum_probability_error": 0.0,
+      "scoring_asset_origins": 24749,
+      "snapshot_content_exact": true
+    },
+    "scope": "synthetic_2020_2022_only",
+    "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+    "support": {
+      "ADAUSDT": {
+        "calibrations": {
+          "calibrated_coarse_logistic": "fit",
+          "calibrated_matched_logistic": "fit",
+          "calibrated_tree": "fit"
+        },
+        "models": {
+          "matched_logistic": "fit",
+          "tree": "fit"
+        },
+        "origins": 14553,
+        "trials": 150970
+      },
+      "BTCUSDT": {
+        "calibrations": {
+          "calibrated_coarse_logistic": "fit",
+          "calibrated_matched_logistic": "fit",
+          "calibrated_tree": "fit"
+        },
+        "models": {
+          "matched_logistic": "fit",
+          "tree": "fit"
+        },
+        "origins": 14547,
+        "trials": 119738
+      },
+      "DOGEUSDT": {
+        "calibrations": {
+          "calibrated_coarse_logistic": "fit",
+          "calibrated_matched_logistic": "fit",
+          "calibrated_tree": "fit"
+        },
+        "models": {
+          "matched_logistic": "fit",
+          "tree": "fit"
+        },
+        "origins": 14550,
+        "trials": 142536
+      },
+      "ETHUSDT": {
+        "calibrations": {
+          "calibrated_coarse_logistic": "fit",
+          "calibrated_matched_logistic": "fit",
+          "calibrated_tree": "fit"
+        },
+        "models": {
+          "matched_logistic": "fit",
+          "tree": "fit"
+        },
+        "origins": 14550,
+        "trials": 132320
+      }
+    },
+    "windows": {
+      "calibration": [
+        "2021-09-01T00:00:00+00:00",
+        "2022-01-01T00:00:00+00:00"
+      ],
+      "evaluation": [
+        "2022-01-01T00:00:00+00:00",
+        "2023-01-01T00:00:00+00:00"
+      ],
+      "fit": [
+        "2020-01-01T00:00:00+00:00",
+        "2021-09-01T00:00:00+00:00"
+      ],
+      "role": "development_demonstration",
+      "year": 2022
+    }
+  },
+  "final_evaluation_ready": false,
+  "final_execution_enabled": false,
+  "idempotence": {
+    "all_retained_versions_have_identical_numerical_snapshot": true,
+    "cross_directory_bytes_identical": true,
+    "current_output_content_and_mtime_unchanged": {
+      "docs/annual_checkpoint_io_preflight.md": {
+        "mtime_ns": 1793935852585057037,
+        "sha256": "d393f6a3fbdf4f82abbe92287ea251f53d11cff715c22753ee205c2280cb98df",
+        "size": 5863
+      },
+      "results/annual_checkpoint_io_preflight/checkpoints/e5d1c690f3f74866e4149519ae98eeb4eb44317289681bf55ba3fdbcfebfd9fd/annual_2022_zero_rate.checkpoint.json": {
+        "mtime_ns": 1793935826766502866,
+        "sha256": "8a4728ebfc2ee7150e882f7daceb479249f33ce217c000ba36bad7c6bd332f06",
+        "size": 476981
+      },
+      "results/annual_checkpoint_io_preflight/summary.json": {
+        "mtime_ns": 1793935852584057016,
+        "sha256": "5aafcbdd6a9ebbe5e970c4ace52430dbf8487ce07cac5ad514d59ec883ea83a5",
+        "size": 9102
+      }
+    },
+    "full_runner_rerun_passed": true,
+    "repeated_save_content_and_mtime_preserved": true,
+    "retained_source_binding_versions": [
+      {
+        "path": "results/annual_checkpoint_io_preflight/checkpoints/4058b38a5d4350f95a8f440855abbc424c62b279824a2b9236adec7baed0471c/annual_2022_zero_rate.checkpoint.json",
+        "sha256": "070882921e8ab804831558e6717ef3db63d0f24adc67d53f7354ddbb590d6a82",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490"
+      },
+      {
+        "path": "results/annual_checkpoint_io_preflight/checkpoints/48b8b3c0d11c02df681beb675e113c9995f1dc2187632ce24c519db00ac0c9ac/annual_2022_zero_rate.checkpoint.json",
+        "sha256": "8e893ff4be8f184a2d295d77597e79cb9872861fb71fe4b99d6b881bc775caa8",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490"
+      },
+      {
+        "path": "results/annual_checkpoint_io_preflight/checkpoints/e5d1c690f3f74866e4149519ae98eeb4eb44317289681bf55ba3fdbcfebfd9fd/annual_2022_zero_rate.checkpoint.json",
+        "sha256": "8a4728ebfc2ee7150e882f7daceb479249f33ce217c000ba36bad7c6bd332f06",
+        "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490"
+      }
+    ]
+  },
+  "limitations": [
+    "Synthetic zero-financing demonstration; no new actual EFFR annual run.",
+    "Exact parity verified on the installed runtime; cross-platform/version numerical compatibility is not certified.",
+    "A trusted external digest/provenance is required; self-consistent embedded hashes are not independent evidence.",
+    "Annual model checkpoints do not persist live context/rolling-terminal records or forecast tables.",
+    "Hour-versus-minute first passage and historical last-trade measurement limitations remain."
+  ],
+  "preservation": {
+    "data_states_unchanged": 3180,
+    "experiment_states_unchanged": 22876,
+    "frozen_authority_sha256": {
+      "configs/final_evaluation.yaml": "647fc5f3ca09b58c0a7ea74644b6316ed7eda6fd6e3ed1d741464e57d6861e21",
+      "docs/final_evaluation_freeze_receipt.md": "2a74cb15c1121f56d5cdd9e3db146c89dd299dd9ecd612f7ca3aafbad3eed2c0",
+      "docs/final_evaluation_protocol.md": "728d1596f0a219847a252de57dff72867801c090326779eedc8df11383631e26"
+    },
+    "git_HEAD_refs_remotes_staged_entries_index_bytes": "unchanged",
+    "git_index_sha256": "881a258c9ef5536be56e4f8c0c292fa14f61353a7ad9df3c1aede55784f892ae",
+    "market_and_historical_result_checks": "metadata_only_no_market_content_read_or_hash",
+    "prior_annual_checkpoint_report_and_receipt_sha256": {
+      "docs/annual_forecasting_preflight.md": "6c9d7e6ae03a49a39a47055510bf062ef38a1b218816ac03a2e217f44e343ad9",
+      "docs/annual_forecasting_verification.json": "0ef34d5df8e3c31341624c8cd2a00ff5005ad93d66ad76a506b3778c85c38590",
+      "docs/checkpoints/2026-11-09_baseline.md": "8670cd74a212c2e416891c47298536b28c8f1cec1c7b1538ca273e0213913e4a",
+      "docs/checkpoints/2026-11-09_verification.json": "00dfe57d1421e2031b4edc9c2f708ca9bc44aba8f74cfe44a97654e3e63b3af1"
+    },
+    "prior_file_size_mtime_states_unchanged": 26441,
+    "prior_safe_source_document_hashes_unchanged": 145,
+    "results_states_unchanged": 111
+  },
+  "protocol": "final-survival-evaluation-v1.0.0",
+  "provenance": {
+    "binding": {
+      "environment": {
+        "numpy": "2.5.4",
+        "pandas": "3.0.6",
+        "python": "3.14.7"
+      },
+      "frozen_sha256": {
+        "configs/final_evaluation.yaml": "647fc5f3ca09b58c0a7ea74644b6316ed7eda6fd6e3ed1d741464e57d6861e21",
+        "docs/final_evaluation_freeze_receipt.md": "2a74cb15c1121f56d5cdd9e3db146c89dd299dd9ecd612f7ca3aafbad3eed2c0",
+        "docs/final_evaluation_protocol.md": "728d1596f0a219847a252de57dff72867801c090326779eedc8df11383631e26"
+      },
+      "implementation_sha256": {
+        "data/features.py": "a09b6be619f2c9856049d24f95abc265ce6294aa9c0065a0ed9551796684d2fd",
+        "data/labels.py": "ced5b91d3a3df384232956856a5a65bacab1c90a66e7e234e2c49e35520b7dc9",
+        "data/windows.py": "807b9d6b16e258175a8c86fbe6321c9fade0bc1e71923be1ecc5fbb597723b3f",
+        "evaluation/metrics.py": "d2ba0897726e63bba2d5d047dd060b4b2ff5ef56dcb82dc4fc5d24f10f465122",
+        "evaluation/statistics.py": "0ea726832212c0de211d22c31e5bf9315a00acd4c940c9cdab8e9c8421d0669e",
+        "evaluation/survival_audit.py": "e7e58aaf1b2bfed712f6eca87ada9c3911fa61d0c13907a32d7daa4d780baebd",
+        "models/calibration.py": "29b2e465825fc9ef5d6ca8ba65b7a4356a9f2bfdccab7674b5a2cdfe651bdd40",
+        "models/logistic.py": "d98d6af1c46479d35471f690863de1de306043c37c122338718cb1a42d1a6649",
+        "models/survival.py": "110b13146759e8f879ea716810367c323aa2ba1df2f0ade315fc9eea7b5f5044",
+        "models/trees.py": "356eec63ee8432760749b0a98039d17cf9df67637459aed394007da745503417",
+        "theory.py": "04ad5b8fc99f7565f9730dc5968897c53fa2df34d420d8a3c92c6022c64998aa",
+        "training/annual.py": "3e3466b8e1f82add9d950a7a41a5f0205db01be8ec13a8aead3c52928ff83d36",
+        "training/checkpoints.py": "2fbb4e163cf60ea188ca725c8d94d0ad1bfae277f56a3efe2a8e97b99b96e8fa",
+        "training/fit.py": "2c2693eb4241f52902146e43d02d0071c6a5a62698b945fb084fbeec1cf590e6"
+      }
+    },
+    "inputs": {
+      "ADAUSDT": {
+        "columns_and_dtypes": [
+          [
+            "annual_rate",
+            "float64"
+          ],
+          [
+            "bar_available_at_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "bar_open_time_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "perp_close",
+            "float64"
+          ],
+          [
+            "rate_available_at_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "spot_close",
+            "float64"
+          ],
+          [
+            "theory_available",
+            "bool"
+          ]
+        ],
+        "end_exclusive_utc": "2022-01-01T00:00:00+00:00",
+        "rows": 17544,
+        "sha256": "20e5d10b073a300045e0ef738e9966673ddbf01d631fc486ad42a4d7969b979c",
+        "start_utc": "2020-01-01T00:00:00+00:00"
+      },
+      "BTCUSDT": {
+        "columns_and_dtypes": [
+          [
+            "annual_rate",
+            "float64"
+          ],
+          [
+            "bar_available_at_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "bar_open_time_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "perp_close",
+            "float64"
+          ],
+          [
+            "rate_available_at_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "spot_close",
+            "float64"
+          ],
+          [
+            "theory_available",
+            "bool"
+          ]
+        ],
+        "end_exclusive_utc": "2022-01-01T00:00:00+00:00",
+        "rows": 17544,
+        "sha256": "4d505443d9b2b00758b3bbf106d424c08f04352ce3e0bd068d3f45e131b3e226",
+        "start_utc": "2020-01-01T00:00:00+00:00"
+      },
+      "DOGEUSDT": {
+        "columns_and_dtypes": [
+          [
+            "annual_rate",
+            "float64"
+          ],
+          [
+            "bar_available_at_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "bar_open_time_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "perp_close",
+            "float64"
+          ],
+          [
+            "rate_available_at_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "spot_close",
+            "float64"
+          ],
+          [
+            "theory_available",
+            "bool"
+          ]
+        ],
+        "end_exclusive_utc": "2022-01-01T00:00:00+00:00",
+        "rows": 17544,
+        "sha256": "eaeeaf5d422b5869e86cbf6c536f28fb392fbc61839e5612b720281b6a298c8a",
+        "start_utc": "2020-01-01T00:00:00+00:00"
+      },
+      "ETHUSDT": {
+        "columns_and_dtypes": [
+          [
+            "annual_rate",
+            "float64"
+          ],
+          [
+            "bar_available_at_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "bar_open_time_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "perp_close",
+            "float64"
+          ],
+          [
+            "rate_available_at_utc",
+            "datetime64[us, UTC]"
+          ],
+          [
+            "spot_close",
+            "float64"
+          ],
+          [
+            "theory_available",
+            "bool"
+          ]
+        ],
+        "end_exclusive_utc": "2022-01-01T00:00:00+00:00",
+        "rows": 17544,
+        "sha256": "7d79a120332aef7ce71c3283d77c5c7effff300367ba982471f72ea6e8599b3e",
+        "start_utc": "2020-01-01T00:00:00+00:00"
+      }
+    },
+    "source_kind": "synthetic"
+  },
+  "recommended_next_bounded_preflight": "Synthetic/pre-2023 chunked context and rolling-record resume parity, then forecast-table storage contracts; no final access.",
+  "remaining_blockers": {
+    "final_execution": "explicit authorization after relevant engineering/data gates",
+    "financial_replay": "separate continuous/checkpoint financial state and accounting parity; outside this task",
+    "forecasting_IO": "authorized bounded data-source connection, context and rolling-terminal-ledger resume parity, forecast-table serialization with exact key/status populations, unsupported-annual orchestration",
+    "future_data": "separate acquisition/access/QA authorization and verified four-asset plus EFFR coverage"
+  },
+  "resolved_validation_edges": [
+    "Existing mixed UTC Timestamp/NaT and all-NaT publication columns accepted without localizing non-null naive times.",
+    "Nullable metadata values explicitly rejected rather than relying on skip-NA equality reductions."
+  ],
+  "scope_guards": {
+    "existing_experiments_or_checkpoints_overwritten": false,
+    "final_execution_enabled": false,
+    "financial_backtest": false,
+    "git_staging_commit_push": false,
+    "market_or_EFFR_download": false,
+    "model_or_rule_change": false,
+    "real_2023_2025_contents_read_inspected_hashed_downloaded_evaluated": false,
+    "real_market_content_opened_or_hashed": false
+  },
+  "serialization_contract": {
+    "existing_conflicting_file": "reject_without_rewrite",
+    "final_year_requests": "reject_before_checkpoint_read",
+    "format": "annual-development-checkpoint-v1",
+    "input_identity_hash_scope": "only_fitting_and_calibration_inputs_before_evaluation_start",
+    "load_requires": [
+      "expected_file_SHA256",
+      "expected_year",
+      "expected_financing",
+      "expected_provenance"
+    ],
+    "publish": "atomic_no_clobber_hard_link_after_fsync",
+    "representation": "canonical_finite_JSON_float_roundtrip_no_pickle_no_precision_conversion",
+    "scoring_rules": "unchanged_canonical_implementation",
+    "time_fields": "explicit_UTC_except_nullable_all_NaT_and_existing_UTC_Timestamp_object_columns",
+    "unknown_fields_or_duplicate_JSON_keys": "reject",
+    "unsupported_fit_or_map": "CheckpointUnsupportedError_with_explicit_asset_model_statuses"
+  },
+  "status": "ANNUAL_CHECKPOINT_IO_READY_FOR_BOUNDED_PREFLIGHT",
+  "tests": {
+    "focused": {
+      "log_sha256": "69dd5b94d7242b592755d48516aec318b49df9c316d8ac23e2d6f5a666883b8b",
+      "passed": 30
+    },
+    "new_focused_tests": 30,
+    "portable": {
+      "log_sha256": "7c6f8e52ba18631fca8b8da048d134a47243d18860ac3c09e741397641fe25d4",
+      "passed": 243
+    },
+    "prior_portable_tests_preserved": 213,
+    "unchanged_archival_hash_integrations_not_in_portable_suite": 3
+  },
+  "unresolved_verification_failures": []
+}
