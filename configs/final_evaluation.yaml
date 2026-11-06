@@ -1,0 +1,723 @@
+# Frozen scientific specification v1.0.0; declarative only, no execution loader.
+# Approval of D01-D07 does not authorize final-data access or any model/replay run.
+schema_version: final-evaluation-v1
+protocol_id: final-survival-evaluation
+protocol_version: 1.0.0
+protocol_identity: final-survival-evaluation-v1.0.0
+status: SCIENTIFIC_PROTOCOL_FROZEN_ENGINEERING_PENDING
+decision_recorded_date: '2026-11-02'
+design_frozen: true
+holdout_access_authorized: false
+execution_enabled: false
+protocol_document: docs/final_evaluation_protocol.md
+freeze_receipt: docs/final_evaluation_freeze_receipt.md
+schema_contract:
+  purpose: declarative_scientific_specification_only
+  matching_loader_implemented: false
+  unknown_or_changed_scientific_fields: require_versioned_review_not_silent_defaults
+  activates_existing_runner: false
+decisions:
+  D01:
+    status: adopted
+    rule: study_specific_2023_2025_prequential_no_final_year_selection
+    older_plans: preserve_as_historical
+  D02:
+    status: adopted
+    rule: 20_calendar_month_fit_4_month_calibration_strict_16h_purge
+    failed_support: unavailable_no_window_or_gate_relaxation
+  D03:
+    status: adopted
+    rule: annual_calibrated_original_coarse_logistic_past_clock_participation
+    minimum_finite_past_forecasts: 100
+  D04:
+    status: adopted
+    rule: hourly_missing_prediction_pass_through_global_model_reference_support_failure_unavailable
+    IPCW: same_canonical_status_range_floor_for_point_difference_interval
+  D05:
+    status: adopted
+    rule: annual_prefix_statistics_without_evaluation_origin_purge_continuous_financial_state
+  D06:
+    status: adopted
+    rule: raw_tree_vs_raw_matched_hourly_logistic_8h_IPCW_complete_12_cell_mean_separate_financing
+    inference: annual_intervals_descriptive_cross_year_point_no_binary_confirmatory_rule
+  D07:
+    status: adopted
+    rule: bounded_minimal_models_references_secondaries_and_one_participation_control
+    additional_architectures: deferred
+execution:
+  enabled: false
+  runner: null
+  auto_discovery: false
+  task_scope: scientific_protocol_freeze_static_only
+  forbidden_now:
+  - holdout_content_read
+  - holdout_content_hash
+  - holdout_sampling
+  - market_or_financing_download
+  - training
+  - calibration
+  - prediction
+  - backtest
+  - scoring
+  - final_evaluation
+  current_observation_end_exclusive: '2023-01-01T00:00:00Z'
+  future_terminal_end_exclusive: '2026-01-01T00:00:00Z'
+  require_separate_access_and_execution_authorization: true
+  engineering_preflight_passed: false
+assets:
+  primary:
+  - BTCUSDT
+  - ETHUSDT
+  - DOGEUSDT
+  - ADAUSDT
+  excluded_theory:
+    BNBUSDT: historical_iota_unverified
+  require_all_assets_in_reporting: true
+chronology:
+  timezone: UTC
+  intervals: half_open
+  fit_months: 20
+  calibration_months: 4
+  evaluation_years:
+  - 2023
+  - 2024
+  - 2025
+  algorithm: predetermined_annual_prequential_refit
+  selection_in_final_period: false
+  windows:
+  - year: 2023
+    fit:
+    - '2021-01-01T00:00:00Z'
+    - '2022-09-01T00:00:00Z'
+    calibration:
+    - '2022-09-01T00:00:00Z'
+    - '2023-01-01T00:00:00Z'
+    evaluation:
+    - '2023-01-01T00:00:00Z'
+    - '2024-01-01T00:00:00Z'
+  - year: 2024
+    fit:
+    - '2022-01-01T00:00:00Z'
+    - '2023-09-01T00:00:00Z'
+    calibration:
+    - '2023-09-01T00:00:00Z'
+    - '2024-01-01T00:00:00Z'
+    evaluation:
+    - '2024-01-01T00:00:00Z'
+    - '2025-01-01T00:00:00Z'
+  - year: 2025
+    fit:
+    - '2023-01-01T00:00:00Z'
+    - '2024-09-01T00:00:00Z'
+    calibration:
+    - '2024-09-01T00:00:00Z'
+    - '2025-01-01T00:00:00Z'
+    evaluation:
+    - '2025-01-01T00:00:00Z'
+    - '2026-01-01T00:00:00Z'
+  fit_and_calibration_purge_hours: 16
+  eligible_origin_rule: origin_plus_16h_strictly_before_segment_end
+  trial_or_calibration_label_publication: strictly_before_fit_or_map_cutoff
+  feature_publication: at_or_before_origin
+  evaluation_origin_end_purge: false
+  carry_feature_context_across_windows: true
+  earlier_evaluation_labels_for_later_refit: only_if_published_before_that_refit_cutoff
+  support_for_exact_20_4_schedule: not_yet_measured
+  scoring_prefix: individual_evaluation_year_end
+  origin_lower_bound: at_or_after_segment_start
+  feature_warmup_adds_training_origins: false
+  evaluation_year_days:
+    2023: 365
+    2024: 366
+    2025: 365
+  within_year_coefficient_or_map_refit: false
+  rolling_KM_causal_updates: true
+dataset:
+  prior_version: five-asset-observations-v1
+  future_version: requires_new_isolated_manifest_and_explicit_access_approval
+  spot_interval: 1m
+  perpetual_product: Binance_USDT_M_linear_perpetual
+  bar_available_at: bar_open_plus_1min
+  primary_prices: immediately_completed_minute_closes_at_exact_hour
+  duplicates: reject_including_identical
+  timestamp_units: detect_per_file_s_ms_us_ns_then_normalize_UTC_ns
+  missing_prices: no_imputation_or_forward_fill
+  valid_inactive_bars: retain_as_marks_exclude_primary_signal_origins_and_active_fills
+  origin_active: paired_valid_and_positive_volume_and_trade_count_both_venues
+  structural_prelisting: explicit_not_missing_or_zero
+  funding_publication_lag_minutes: 1
+  funding_maximum_known_age_hours: 12
+  funding_join: backward_on_available_at_allow_exact
+  funding_cash_ownership: (entry,exit] for closed positions; validated accounting cutoff for open positions
+  funding_cadence: actual_events_and_reported_intervals_never_fixed_8h_grid
+  quarantine: before_public_open_or_first_verified_tradable_bar
+  funding_notional_mark_maximum_age_minutes: 1
+  anomalies: retain_and_flag_not_outcome_selected_removal
+  funding_age_measured_from: settlement_time
+  final_readiness:
+    BTCUSDT: archives_previously_acquired_through_2025_sealed_not_freshly_audited
+    ETHUSDT: archives_previously_acquired_through_2025_sealed_not_freshly_audited
+    DOGEUSDT: 2023_2025_acquisition_build_validation_required
+    ADAUSDT: 2023_2025_acquisition_build_validation_required
+    nyfed_effr_lag7d: verified_inputs_stop_2022_extension_through_2025_required
+    archive_names_prove_coverage: false
+  development_coverage:
+    BTCUSDT: '2020_2022'
+    ETHUSDT: '2020_2022'
+    DOGEUSDT: 2020_07_through_2022_12
+    ADAUSDT: 2020_01_through_2022_12
+  required_archive_fields:
+  - OHLCV
+  - quote_volume
+  - trade_count
+  - taker_base_volume
+  - taker_quote_volume
+  - open_time
+  - close_time
+  checksum_authenticated_spot_and_perp: true
+  read_bounds: decision_time_before_materialization_preserve_prior_partition_midnight_endpoint
+target:
+  primary: direction_fixed_theoretical_first_hourly_zero_boundary
+  primary_horizon_hours: 8
+  hazard_hours:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  secondary_horizons_hours:
+  - 1
+  - 2
+  - 4
+  - 16
+  direction: -sign(rho_origin)
+  short_perp_event: rho_future_le_zero
+  long_perp_event: rho_future_ge_zero
+  first_future_gap: censor_at_last_consecutive_valid_hour
+  zero_direction: unavailable
+  no_2026_outcomes: true
+  trial_response: one_exactly_at_observed_event_hour_other_observed_survivor_trials_zero
+  trial_eligibility: followup_ge_k_and_trial_publication_strictly_before_fit_cutoff
+  trial_publication: origin_plus_k_hours
+  gap_censor_publication: first_gap_time_not_preceding_valid_hour
+  annual_administrative_censor: last_observed_hour_strictly_before_next_January_1
+  evaluation_origin_purge_hours: 0
+features:
+  primary_order:
+  - rho
+  - abs_rho
+  - proposed_direction
+  - low_fee_margin
+  - rho_change1
+  - rho_minus_mean24
+  proposed_direction: -sign(rho)
+  low_fee_margin: abs(rho)-kappa*2*(2.25+0.18)/10000
+  rho_change1: current_minus_previous_hour_rho
+  rho_minus_mean24: rho-rolling_24h_mean(valid_rho,min_periods=12,closed=right)
+  issuance: origin_features_only_not_future_label_or_path_completeness
+  rolling_mean_minimum_observations: 12
+  imputation: false
+  rho_change1_requires_previous_scheduled_hour: true
+  rich_feature_path_eligibility_required: false
+models:
+  primary_tree:
+    source: src/spot_perp_basis/models/trees.py
+    estimator: local_numpy_histogram_Newton_boosting
+    package_xgboost: false
+    depth: 3
+    learning_rate: 0.1
+    rounds: 80
+    histogram_bins: 32
+    quantiles: training_hourly_trial_matrix_only
+    minimum_leaf_trials: 200
+    leaf_l2: 5.0
+    minimum_split_gain: 0.0
+    minimum_unique_origins: 100
+    minimum_trials: 500
+    minimum_class_trials: 20
+    randomized_tree_operations: false
+    callables:
+    - train
+    - survival
+    origin_support_wrapper: src/spot_perp_basis/training/fit.py:fit_hourly
+    initialization: training_event_trial_log_odds
+    gradient: p_minus_y
+    hessian: p_times_one_minus_p
+    leaf: minus_gradient_sum_over_hessian_sum_plus_5
+    quantile_levels: j/32_for_j_1_through_31_unique_cuts
+    quantization_side: left
+    split_gain_strictly_positive: true
+    feature_bin_iteration: source_order_first_argmax
+    split_gain_tie_tolerance: 1.0e-12
+    early_stopping: false
+    row_or_feature_subsampling: false
+  matched_hourly_logistic:
+    source: src/spot_perp_basis/models/logistic.py
+    alpha: 0.001
+    interval_intercepts: 16_with_first_deviation_zero
+    feature_slopes: shared_across_intervals
+    objective: mean_binary_logloss_plus_alpha_over_2_times_penalized_coefficients_squared
+    penalize_interval_deviations: true
+    penalize_global_intercept: false
+    standardization: training_risk_trial_mean_and_population_sd
+    constant_scale_threshold: 1.0e-12
+    constant_scale_replacement: 1.0
+    maximum_iterations: 80
+    maximum_gradient_tolerance: 1.0e-07
+    newton_diagonal_jitter: 1.0e-12
+    minimum_trials: 500
+    minimum_class_trials: 20
+    independent_unique_origin_gate_in_source: false
+    callables:
+    - fit
+    - predict
+    nonconvergence: unavailable
+    newton_line_search_minimum_fraction: 1.0e-08
+    objective_line_search_tolerance: 1.0e-12
+    prediction_return_orientation: cumulative_event_probability_then_hazard
+  matched_design:
+    same_unique_origins_features_hourly_trials_responses_and_cutoffs: true
+    sample_weights: none
+    interval_replication: legitimate_at_risk_trials_only
+    pair_supported: both_fit_successfully
+  legacy_coarse_logistic:
+    role: secondary_and_participation_rate_source
+    origin_features:
+    - rho
+    - abs_rho
+    intervals_hours:
+    - 1
+    - 2
+    - 4
+    - 8
+    - 16
+    - 32
+    - 64
+    - 128
+    alpha: 0.01
+    maximum_iterations: 60
+    minimum_trials: 100
+    minimum_class_trials: 10
+    source: src/spot_perp_basis/models/logistic.py
+    callables:
+    - logistic_fit
+    - hazard_predict
+    maximum_gradient_tolerance: 1.0e-07
+    newton_diagonal_jitter: 1.0e-12
+    newton_line_search_minimum_fraction: 1.0e-06
+    objective_line_search_tolerance: 1.0e-12
+    standardization: training_coarse_trial_mean_population_sd_scale_le_1e_12_becomes_1
+    objective: mean_binary_logloss_plus_alpha_over_2_times_squared_interval_deviations_and_slopes
+    global_intercept_penalized: false
+    nonconvergence: unavailable
+    origin_purge_hours: 16
+    partial_censored_intervals: omitted
+    event_publication: actual_event_time
+    survivor_publication: origin_plus_interval_endpoint
+    maximum_trial_publication: strictly_before_fit_cutoff
+    prediction_return_orientation: survival_then_hazard
+  rich_feature_models: deferred_not_registered
+  MLP:
+    decision: DEFER
+    implemented: false
+    registered_final_model: false
+  primary_pair:
+  - raw_tree
+  - raw_matched_logistic
+  forecast_registry:
+  - raw_tree
+  - raw_matched_logistic
+  - unconditional_KM
+  - magnitude_KM
+  - rolling_magnitude_KM
+  - raw_coarse_logistic
+  - calibrated_tree
+  - calibrated_matched_logistic
+  - calibrated_coarse_logistic
+  other_deferred:
+  - LSTM
+  - Transformer
+  - additional_architecture_search
+  - volatility_heuristic
+  - 3_5_A_C
+  - attribution_only_logistic
+  - pooled_forecast_KM
+empirical:
+  minimum_curve_origins: 20
+  magnitude_quantiles:
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  minimum_magnitude_bin: 100
+  magnitude_fallback: asset_KM
+  fixed_KM_training_origins: original_minimal_2feature_eligibility_with_16h_cutoff_purge
+  scoring_censor_KM_origins: primary_six_feature_training_cohort
+  reverse_censor_tie_rule: censored_followup_plus_1_event_rows_removed_from_tied_censor_risk_denominator
+  rolling_days: 90
+  rolling_origin_window: (origin-90d,origin)
+  rolling_record_publication: strictly_before_origin
+  rolling_minimum_local: 100
+  rolling_minimum_asset: 200
+  rolling_fallback: local_then_rolling_asset_then_annual_frozen_magnitude
+  annual_magnitude_cutpoints_frozen: true
+  source: src/spot_perp_basis/models/survival.py
+  fit_adapter_source: src/spot_perp_basis/training/fit.py:fit_survival
+  static_terminal_record_publication: strictly_before_fit_cutoff
+  magnitude_duplicate_cuts: collapse
+  magnitude_search_side: left
+  KM_prediction_tail: source_clamp_does_not_grant_IPCW_support
+  rolling_ongoing_paths: excluded_until_terminal_record_publication
+  missing_or_unsupported: 'null'
+calibration:
+  role: secondary_only
+  horizon_hours: 8
+  source: src/spot_perp_basis/models/calibration.py
+  family: monotone_Platt
+  probability_logit_epsilon: 1.0e-08
+  l2: 0.001
+  prior_intercept_slope:
+  - 0.0
+  - 1.0
+  nonnegative_slope: true
+  minimum_asset: 200
+  minimum_asset_class: 20
+  minimum_pool: 400
+  minimum_pool_class: 40
+  pool_by: financing_and_model_not_fee_or_financing_copies
+  pool_assets:
+  - BTCUSDT
+  - ETHUSDT
+  - DOGEUSDT
+  - ADAUSDT
+  maximum_iterations: 100
+  gradient_tolerance: 1.0e-08
+  known_outcomes_only: true
+  fitting_population: feature_ready_Low_Fee_origins_in_purged_past_calibration_segment
+  models:
+  - raw_tree
+  - raw_matched_logistic
+  - raw_coarse_logistic
+  parameter_step_tolerance: 1.0e-10
+  line_search_minimum_fraction: 1.0e-10
+  objective_line_search_tolerance: 1.0e-13
+  individual_failure: pooled_four_asset_same_model_control_then_unavailable
+  within_year_update: false
+  calibrated_full_curve_claim: false
+  evaluation_calibration: diagnostic_only_never_updates_issued_predictions
+forecast_evaluation:
+  primary_population: active_nonzero_six_feature_ready_strict_Low_Fee_hourly_origins_regardless_of_occupancy
+  primary_metric: 8h_IPCW_Brier
+  effect: matched_logistic_minus_tree_Brier_positive_favors_tree
+  primary_common_support: raw_tree_and_matched_logistic_only
+  empirical_panel: intersection_with_primary_and_each_explicit_baseline_panel
+  minimum_censor_survival: 0.05
+  require_horizon_within_fitting_censor_max_followup: true
+  early_censored_origins: zero_weight_but_retained_in_denominator
+  event_weight: 1/G(T-1)
+  survivor_weight: 1/G(8)
+  unsupported_model: explicit_null_never_silently_drop_from_primary_pair
+  missing_asset_year_aggregate: strict_12_cell_equal_asset_equal_year_unavailable
+  aggregate_separately_by_financing: true
+  confirmatory_binary_significance_rule: not_claimed_requires_separate_approved_amendment
+  secondary_metrics:
+  - observable_Brier
+  - observable_logloss
+  - AUC
+  - calibration_intercept_slope
+  - mean_probability
+  - known_prevalence
+  - coverage
+  - censoring
+  source: src/spot_perp_basis/evaluation/metrics.py:survival_metrics
+  primary_exact_keys:
+  - asset
+  - financing
+  - origin
+  - horizon
+  primary_required_models:
+  - raw_tree
+  - raw_matched_logistic
+  scoring_input_orientation: survival_equals_1_minus_event_probability
+  IPCW_guard_shared_by:
+  - point_score
+  - paired_difference
+  - uncertainty_interval
+  IPCW_guard:
+  - censor_status_fit
+  - horizon_le_fitting_censor_maximum_followup
+  - G_h_ge_0_05
+  - all_event_G_Tminus1_ge_0_05
+  IPCW_clipping_cannot_manufacture_support: true
+  main_aggregate: equal_asset_equal_year_mean
+  main_required_cells_per_financing: 12
+  main_weight_per_cell: 1/12
+  main_missing_cell: aggregate_unavailable
+  annual_equal_asset_requires_all_four: true
+  supported_cell_summary: separate_name_explicit_cells_counts_weights_never_replacement
+  primary_pair_missing_model: pair_unavailable
+  forecast_issuance: causal_features_before_label_status_attached
+uncertainty:
+  seed: 20261102
+  block_days: 14
+  bootstrap_replicates: 1000
+  percentile_bounds:
+  - 0.025
+  - 0.975
+  per_year_anchor: January_1_UTC
+  statistical_weights: multinomial_over_union_occupied_blocks_shared_across_assets
+  statistical_minimum_total_origins: 30
+  statistical_minimum_blocks_each_asset: 8
+  statistical_minimum_valid_draw_fraction: 0.8
+  financial_weights: integer_block_draw_counts_over_all_calendar_blocks_shared_across_assets
+  financial_minimum_changed_blocks: 8
+  financial_minimum_entries: 20
+  financial_minimum_entry_weeks: 8
+  financial_both_policy_and_He_support_required: true
+  identical_cash: explicit_degenerate_comparison_not_new_evidence
+  macro_financial_support: all_contributing_changing_asset_cells_pass
+  aggregate_three_year_interval: not_registered
+  shuffled_hour_or_IID_trade_resampling: false
+  statistical_source: src/spot_perp_basis/evaluation/statistics.py:block_interval
+  financial_source: src/spot_perp_basis/evaluation/statistics.py:block_weights,weighted_risk
+  per_year_intervals: true
+  three_year_primary_point: descriptive_only
+  cross_year_p_value: false
+  combined_financing_test: false
+  multiplicity_correction: false
+  binary_confirmatory_success_rule: false
+  financial_daily_cash_equality_atol: 1.0e-09
+  financial_daily_cash_equality_rtol: 0.0
+  financial_changed_block_absolute_cash_sum_gt: 1.0e-06
+  financial_leave_period_out: contribution_and_ordered_deletion_diagnostics_not_strategy_reruns
+economics:
+  financing_controls:
+  - zero_rate
+  - nyfed_effr_lag7d
+  effr_quote_conversion: percent_divided_by_100_simple_ACT365_annual_decimal
+  effr_publication_assumption_days: 7
+  future_effr_coverage: not_acquired_or_authorized
+  original_aave: unavailable_not_substituted_as_exact_replication
+  fees_bps:
+    zero:
+      spot: 0.0
+      perp: 0.0
+    paper_low:
+      spot: 2.25
+      perp: 0.18
+    paper_medium:
+      spot: 4.5
+      perp: 0.72
+    paper_high:
+      spot: 6.75
+      perp: 1.44
+  kappa_annual: 1095.0
+  gamma_annual: 0.5475
+  iota_annual_control: 0.1095
+  parameter_status: conditional_constant_paper_parameter_control_not_verified_exchange_history
+  perpetual_entry_notional_usdt: 1000000
+  reporting_capital_usdt: 3000000
+  reporting_capital_is_margin: false
+  primary_policy: raw_tree_strict_probability_gt_annual_asset_KM8
+  hourly_missing_prediction: pass_through_He_and_count
+  entry_price_delay_minutes: 1
+  fill: first_active_paired_open_at_or_after_signal_plus_delay
+  fill_activity_confirmation: open_plus_1min_proxy_not_known_at_open
+  exit: short_perp_rho_le_0_long_perp_rho_ge_0
+  hedge: fixed_entry_lambda_and_base_quantities
+  maximum_positions_per_asset_scenario_policy: 1
+  primary_cash_metric: full_calendar_net_delta_vs_same_scenario_He
+  key_secondary:
+  - daily_dollar_drawdown_delta
+  - daily_zero_threshold_downside_C0_delta
+  - marked_gross_exposure_time_delta
+  policies:
+  - He_original
+  - raw_tree
+  - raw_matched_logistic
+  - magnitude_KM
+  - rolling_magnitude_KM
+  - training_rate_participation
+  - raw_coarse_logistic
+  - calibrated_tree
+  - calibrated_matched_logistic
+  - calibrated_coarse_logistic
+  unconditional_KM_policy: threshold_and_statistical_baseline_only_no_tautological_self_gate
+  participation:
+    source: src/spot_perp_basis/backtest/strategy.py:verdict
+    q: annual_past_calibration_clock_mean_calibrated_coarse_logistic_verdict
+    no_label_or_fill_completeness_screen_for_q: true
+    retrospective_past_map_rate_not_live_calibration_period_returns: true
+    random_key: seed_pipe_symbol_pipe_financing_pipe_origin_isoformat
+    hash: SHA256_first_8_bytes_big_endian_divided_by_2_power_64
+    acceptance: uniform_strictly_lt_q
+    fee_key: false
+    evaluation_rate_matching_or_seed_search: false
+    seed: 20261102
+    source_model: calibrated_coarse_logistic
+    source_fit_alpha: 0.01
+    source_fit_features:
+    - rho
+    - abs_rho
+    source_fit_grid_hours:
+    - 1
+    - 2
+    - 4
+    - 8
+    - 16
+    - 32
+    - 64
+    - 128
+    population: full_feature_ready_finite_calibrated_Low_Fee_past_calibration_clock
+    minimum_finite_forecasts: 100
+    update_time: January_1_before_evaluation_year
+    within_year_update: false
+    year_salt: false
+    origin_serialization: UTC_aware_Timestamp_isoformat_with_plus_00_colon_00
+    degenerate_q: report_zero_or_one_without_clipping_or_repair
+    unsupported: unavailable
+    minimum_finite_forecasts_clock: full_preceding_calibration_clock_not_only_Low_Fee
+    minimum_q_population_origins: 1
+    feature_ready_cohort: primary_six_feature_minimal_issuance_cohort_with_coarse_two_feature_model
+  state:
+    intervention_start: '2023-01-01T00:00:00Z'
+    initial: same_original_He_pre2023_state_per_asset_financing_fee
+    preserve:
+    - positions
+    - fixed_quantities
+    - entry_lambda
+    - cash
+    - pending_entry
+    - pending_exit
+    - occupancy
+    - blocked_until
+    - consumed_funding_event_ids
+    - last_observed_marks
+    - fill_confirmation_state
+    annual_refit: swap_forecast_and_reference_snapshots_only_no_position_reset
+    checkpoint_API_in_current_engine: false
+    final_open_position: last_valid_pre2026_mark_no_exit_fee
+    terminal_unknown_owned_cash_or_mark: unavailable_or_explicit_incomplete_accounting_never_zero
+    annual_unsupported_snapshot: annual_comparison_unavailable_preserve_carried_position_exit_and_accounting_obligations
+    terminal_cutoff_exclusive: '2026-01-01T00:00:00Z'
+    no_2026_completion: true
+    all_accept_development_parity_required: true
+    continuous_vs_checkpoint_parity_required: true
+    unidentified_state_after_unsupported_year: dependent_later_comparisons_unavailable_no_invented_restart
+  attribution_identity: deltaNet_equals_deltaPrice_plus_deltaFunding_minus_deltaFinancingDebit_plus_feeSavings
+  calendar_cash_timestamp: frozen_ledger_booking_timestamp_with_actual_settlement_separately_retained
+  counterfactual: full_chronological_state_replay_not_completed_trade_filter
+  invalid_KM_reference: filtered_case_unavailable_not_all_reject_or_invented_pass
+  pre_evaluation_minimum_finite_predictions: 100
+  pre_evaluation_prediction_support_clock: past_calibration_clock
+  secondary_policies:
+  - raw_coarse_logistic
+  - calibrated_tree
+  - calibrated_matched_logistic
+  - calibrated_coarse_logistic
+  unsupported_model_or_failed_support: annual_filtered_case_unavailable_not_all_pass_or_all_reject
+  pre_evaluation_forecast_count_requires_future_label_or_fill: false
+  entry_bound: kappa_times_2_times_spot_plus_perp_bps_divided_by_10000
+  perpetual_quantity: N_divided_by_perp_entry_price
+  spot_quantity: entry_lambda_times_perpetual_quantity
+  price_cash: minus_d_qS_deltaS_plus_d_qF_deltaF
+  funding_cash: minus_d_qF_actual_rate_event_times_perp_mark_event
+  signed_financing_debit: minus_d_qS_previous_observed_spot_available_rate_elapsed_ACT365
+  net_cash: price_plus_funding_minus_signed_financing_debit_minus_fees
+  financing_nonpublication_days: backward_asof_original_convention_no_new_age_threshold
+  indefinite_2022_effr_substitution: false
+  capital_allocation_or_sizing_optimization: false
+risk:
+  daily_return: daily_net_cash_divided_by_fixed_C0
+  drawdown: seeded_actual_prior_equity_positive_peak_to_trough_currency_loss
+  downside: sqrt_mean_min_daily_C0_return_zero_squared
+  exposure_time: fixed_quantities_times_left_observed_prices_USDT_hours
+  gap_exposure: label_carry_proxy_and_report_strict_minute_subtotals
+  sample_sd_ddof: 1
+  annualization_days: 365
+  actual_calendar_days: include_366_for_2024
+  ratio_undefined_tolerance: 1.0e-12
+  expected_shortfall_tail_probability: 0.05
+  minimum_daily_tail_sample: 200
+  minimum_tail_observations: 10
+  minimum_negative_tail_days: 10
+  source: src/spot_perp_basis/evaluation/metrics.py:risk_metrics
+  exposure_source: src/spot_perp_basis/backtest/accounting.py:exposure_panel
+measurement:
+  primary: minute_close
+  frozen_transfer:
+  - OHLC4
+  - one_minute_lagged_spot
+  - valid_only_gap_censored
+  - valid_only_observed_clock
+  - complete_active_path
+  native_candidate_recomputation: separate_diagnostic
+  primary_censor_curve_on_changed_label_process: false
+  economic_execution_robustness: unavailable_not_bid_ask_replay
+  source_definitions: experiments/experiment3_6_nonlinear_survival/robustness36.py
+  transfer_models_refitted: false
+  transfer_features_and_direction: frozen_primary
+  scoring: observable_on_exact_common_known_label_keys
+  complete_active_path_stop: event_hour_if_event_by_8h_else_8h
+  valid_only_observed_clock: separate_skipped_gap_sensitivity_not_primary
+reporting:
+  full_asset_year_matrices: true
+  unfavorable_and_unavailable_cells: mandatory
+  equal_asset_and_equal_year: fixed_complete_scope_not_supported_cell_reweighting
+  financial_portfolio_aggregation: false
+  exploratory_posthoc:
+  - asset_dynamics
+  - volatility
+  - liquidity_proxies
+  - opportunity_density
+  - funding_basis_states
+  - regime_change
+  - calibration_drift
+  - cost_participation
+  exploratory_results_may_change_frozen_models: false
+  forecast_primary_cells_per_model: 24
+  financial_context_cells_per_policy: 96
+  forecast_model_count: 9
+  financial_policy_count: 10
+  main_aggregate_required_cells_per_financing: 12
+  mandatory_tables:
+  - forecasts_and_matched_Brier_gains
+  - calibration_and_reliability_bins
+  - calendar_cash_drawdown_downside_exposure
+  - cash_participation_turnover_attribution
+  - annual_uncertainty_leave_period_concentration
+  - measurement_transfer_native_states
+  - availability_integrity
+  mandatory_figures:
+  - asset_year_Brier_gain_by_financing
+  - annual_equal_asset_weighted_and_descriptive_cross_year_point
+  - reliability
+  - net_vs_drawdown_downside_exposure
+  - cash_attribution
+  - all_fee_and_measurement_heterogeneity
+engineering_pending:
+- parameterized_annual_fit_calibration
+- causal_feature_publication_cutoffs
+- 16h_purge_and_origin_lower_bounds
+- matched_risk_sets
+- annual_static_KM_maps_and_causal_rolling_KM
+- shared_IPCW_support
+- missing_model_reference_cases
+- continuous_cross_year_financial_state
+- pending_orders_and_consumed_events
+- 2024_leap_calendar
+- terminal_valuation_unknown_cash
+- portable_parity_and_leakage_tests
+- holdout_access_authorization
+- DOGE_ADA_and_EFFR_data_preparation
