@@ -152,12 +152,14 @@ def fit_calibrators(samples, begin, end):
                 or sample.duplicated(['symbol', 'origin_time_utc']).any()):
             raise ValueError('Duplicate, out-of-window or unpublished calibration sample')
     pooled = pd.concat(samples.values(), ignore_index=True)
-    pool = platt_fit(pooled.prediction, pooled.actual, 400, 40)
+    pool = None
     maps = {}
     for symbol, sample in samples.items():
         fitted = platt_fit(sample.prediction, sample.actual)
         source = 'asset'
         if fitted['status'] != 'fit':
+            if pool is None:
+                pool = platt_fit(pooled.prediction, pooled.actual, 400, 40)
             fitted = pool.copy()
             source = 'pooled_primary_assets'
         used = sample if source == 'asset' else pooled
@@ -191,7 +193,7 @@ def survival_training(c,label,cohort):
     d=c.reindex(label.index);return empirical_eligible(d,cohort,True)&label.survival_origin_eligible&label.followup_hours.notna()
 
 
-def fit_survival(c,label,cutoff,cohort,alphas,pooled, *, score_grid_hours=(1,2,4,8,16,32,64,128), minimum_magnitude_bin=100):
+def fit_survival(c,label,cutoff,cohort,alphas,pooled, *, score_grid_hours=(1,2,4,8,16,32,64,128), minimum_magnitude_bin=100, include_volatility_heuristic=True):
     d=c.reindex(label.index);base=survival_training(c,label,'minimal')&(label.index<cutoff)
     own=km_fit(label.loc[base,'followup_hours'],label.loc[base,'event_observed'])
     censor_mask=survival_training(c,label,cohort)&(label.index<cutoff)
@@ -205,7 +207,7 @@ def fit_survival(c,label,cutoff,cohort,alphas,pooled, *, score_grid_hours=(1,2,4
         'censor_km':censor,'cohort':cohort,'training_origins':int(censor_mask.sum()),'training_keys_sha256':digest_index(label.index[censor_mask]),
         'last_training_record_available_utc':str(label.loc[censor_mask,'record_available_at_utc'].max())}
     # Origin-only volatility scale, with a training-only single calibration.
-    vol=d.basis_change_rv24_bps.to_numpy()*1095/10000
+    vol=d.basis_change_rv24_bps.to_numpy()*1095/10000 if include_volatility_heuristic else np.full(len(d),np.nan)
     good=base.to_numpy(bool)&np.isfinite(vol)&(vol>0)
     if good.sum()>=20:
         floor=float(np.quantile(vol[good],.1));scale=np.maximum(vol[good],floor)**2/(24*d.abs_rho.to_numpy()[good]**2+1e-24)
@@ -256,3 +258,33 @@ def predict_survival(c,origins,fit,cohort,alphas, *, score_grid_hours=(1,2,4,8,1
         result[name]=surv;hazards[name]=np.where(allowed.to_numpy()[:,None],hazard,np.nan);support[name]=m['status']=='fit'
     result={name:np.where(allowed.to_numpy()[:,None],values,np.nan) for name,values in result.items()}
     return result,support,allowed,hazards
+
+
+def fit_window(context, begin, end):
+    """Frozen minimal models/references on explicit development origin bounds.
+
+    Context is causally prepared before cropping, so warmup is retained without
+    adding earlier fitting origins. Existing development guards stay in force.
+    """
+    from ..data.labels import labels
+    from ..data.windows import origin_mask
+    begin,end=pd.Timestamp(begin),pd.Timestamp(end)
+    if begin.tz is None or end.tz is None or not START<=begin<end<=END:
+        raise ValueError('Development-only fitting window required')
+    require_training_times(context.index)
+    if len(context) and not context.index.equals(pd.date_range(context.index.min(),context.index.max(),freq='h',name=context.index.name)):
+        raise ValueError('Retain explicit missing hours in a regular hourly clock')
+    label=labels(context,begin,end)
+    f=context.reindex(label.index).copy()
+    paired,risk=fit_hourly(f,label,'minimal',end)
+    f.loc[~origin_mask(f.index,begin,end,purge=True),'minimal_eligible']=False
+    empirical=fit_survival(f,label,end,'minimal',[.01],{'status':'not_registered'},
+                           include_volatility_heuristic=False)
+    permitted=(f.minimal_eligible & f.rho.ne(0) & label.survival_origin_eligible)
+    if not label.loc[permitted,'record_available_at_utc'].lt(end).all():
+        raise ValueError('Unpublished terminal record in fitting KM')
+    paired['empirical']={k:empirical[k] for k in ['asset_km','magnitude_cutpoints','magnitude_curves','hazard_0.01']}
+    paired['manifest'].update(fit_start_utc=begin.isoformat(),empirical_origins=int(permitted.sum()),
+        empirical_origin_keys_sha256=digest_index(label.index[permitted]),
+        scoring_censor_origins=paired['scoring_censor_km']['n'])
+    return paired,risk

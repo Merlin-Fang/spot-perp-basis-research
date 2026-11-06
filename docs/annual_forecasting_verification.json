@@ -1,0 +1,469 @@
+{
+  "artifacts_sha256": {
+    "docs/annual_forecasting_preflight.md": "6c9d7e6ae03a49a39a47055510bf062ef38a1b218816ac03a2e217f44e343ad9",
+    "results/annual_forecasting_preflight/summary.json": "be67ab2c28f8b416658b2811b13e93176962f0b567a5e48779be13dc8e0401c7",
+    "scripts/preflight_annual_forecasting.py": "622fa7e0c52b348ab9275718de7441713b807ad85fa3d76d9f36f1189a63e864",
+    "src/spot_perp_basis/data/windows.py": "807b9d6b16e258175a8c86fbe6321c9fade0bc1e71923be1ecc5fbb597723b3f",
+    "src/spot_perp_basis/evaluation/statistics.py": "0ea726832212c0de211d22c31e5bf9315a00acd4c940c9cdab8e9c8421d0669e",
+    "src/spot_perp_basis/training/annual.py": "3e3466b8e1f82add9d950a7a41a5f0205db01be8ec13a8aead3c52928ff83d36",
+    "src/spot_perp_basis/training/fit.py": "2c2693eb4241f52902146e43d02d0071c6a5a62698b945fb084fbeec1cf590e6",
+    "tests/test_annual_forecasting.py": "3054877c3cc9611dce33e99a06294831b2ed2bcb532383467506e6316836f854"
+  },
+  "boundaries": {
+    "2024_calendar_hours": 8784,
+    "2026_completion": false,
+    "evaluation_origin_purge": false,
+    "final_calendars": "pure_metadata_only",
+    "numerical_final_years": "reject_before_accessing_contexts",
+    "publication": "trials_and_used_labels_strictly_before_fit_or_calibration_cutoff",
+    "purge": "origin_plus_16h_strictly_before_segment_end",
+    "real_observations": "2020-01-01T00:00:00Z <= time < 2023-01-01T00:00:00Z"
+  },
+  "commands": {
+    "annual_preflight": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B -m scripts.preflight_annual_forecasting --write-report",
+    "checkpoint": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B -m scripts.checkpoint_survival_baseline --write-report",
+    "focused": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B -m unittest discover -s tests -p test_annual_forecasting.py -v",
+    "portable": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -B -m scripts.test_portable"
+  },
+  "failed_support_checks": [],
+  "final_evaluation_ready": false,
+  "final_execution_enabled": false,
+  "idempotence": {
+    "completed_run_rerun": true,
+    "content_and_mtime_unchanged": {
+      "docs/annual_forecasting_preflight.md": {
+        "mtime_ns": 1793933862357337661,
+        "sha256": "6c9d7e6ae03a49a39a47055510bf062ef38a1b218816ac03a2e217f44e343ad9"
+      },
+      "results/annual_forecasting_preflight/summary.json": {
+        "mtime_ns": 1793933970617661585,
+        "sha256": "be67ab2c28f8b416658b2811b13e93176962f0b567a5e48779be13dc8e0401c7"
+      }
+    }
+  },
+  "parity": {
+    "adapter_refit": {
+      "annual_KM_and_magnitude_exact_parity": true,
+      "censor_KM_exact_parity": true,
+      "evaluation": "2022_inspected_development",
+      "fit_end_exclusive": "2021-05-01T00:00:00+00:00",
+      "fit_start": "2020-01-01T00:00:00+00:00",
+      "linear_maximum_errors": {
+        "beta": 0.0,
+        "mean": 0.0,
+        "scale": 0.0
+      },
+      "manifest": {
+        "empirical_origin_keys_sha256": "fb525ab710505dbe1cf6e14a947d7b40fac326b66983bd0632eb0a2025595d28",
+        "empirical_origins": 11448,
+        "feature_columns": [
+          "rho",
+          "abs_rho",
+          "proposed_direction",
+          "low_fee_margin",
+          "rho_change1",
+          "rho_minus_mean24"
+        ],
+        "fit_cutoff_utc": "2021-05-01 00:00:00+00:00",
+        "fit_start_utc": "2020-01-01T00:00:00+00:00",
+        "maximum_trial_publication_utc": "2021-04-30 14:00:00+00:00",
+        "origin_interval_keys_sha256": "5db2aaacbf7e210e939b8206bf78696b0015b3d215ee024c205c195882bcfe80",
+        "parameters": {
+          "alpha": 0.001,
+          "depth": 3,
+          "learning_rate": 0.1,
+          "maximum_hazard_hour": 16,
+          "rounds": 80
+        },
+        "raw_X_and_hour_sha256": "f3ee890b6892045c11253b6d16a76904292c511cc3339b29888d0eb067bc8c08",
+        "response_sha256": "10153d53bcaa9a8817fb9b8c335dbce5388caf2ef2f1090413d1cd600cf686e7",
+        "scoring_censor_origins": 11424,
+        "trials": 146205,
+        "unique_origins": 11411
+      },
+      "prediction_maximum_errors": {
+        "magnitude_KM": 0.0,
+        "raw_coarse_logistic": 0.0,
+        "raw_matched_logistic": 0.0,
+        "raw_tree": 0.0,
+        "unconditional_KM": 0.0
+      },
+      "risk_trials": 146205,
+      "scope": "BTC_zero_rate_original_May2021_fit_separate_from_annual_demo",
+      "tree_exact_dictionary_parity": true
+    },
+    "unchanged_four_asset_checkpoint": {
+      "cases": [
+        {
+          "archived_prediction_max_absolute_error": {
+            "KM": 0.0,
+            "matched_logistic": 0.0,
+            "tree": 0.0
+          },
+          "financing": "zero_rate",
+          "historical_score_and_gain_parity": true,
+          "scoring_origins": 210,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "archived_prediction_max_absolute_error": {
+            "KM": 0.0,
+            "matched_logistic": 0.0,
+            "tree": 0.0
+          },
+          "financing": "nyfed_effr_lag7d",
+          "historical_score_and_gain_parity": true,
+          "scoring_origins": 202,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "archived_prediction_max_absolute_error": {
+            "KM": 0.0,
+            "matched_logistic": 0.0,
+            "tree": 0.0
+          },
+          "financing": "zero_rate",
+          "historical_score_and_gain_parity": true,
+          "scoring_origins": 320,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "archived_prediction_max_absolute_error": {
+            "KM": 0.0,
+            "matched_logistic": 0.0,
+            "tree": 0.0
+          },
+          "financing": "nyfed_effr_lag7d",
+          "historical_score_and_gain_parity": true,
+          "scoring_origins": 312,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "archived_prediction_max_absolute_error": {
+            "KM": 0.0,
+            "matched_logistic": 0.0,
+            "tree": 0.0
+          },
+          "financing": "zero_rate",
+          "historical_score_and_gain_parity": true,
+          "scoring_origins": 1912,
+          "symbol": "DOGEUSDT"
+        },
+        {
+          "archived_prediction_max_absolute_error": {
+            "KM": 0.0,
+            "matched_logistic": 0.0,
+            "tree": 0.0
+          },
+          "financing": "nyfed_effr_lag7d",
+          "historical_score_and_gain_parity": true,
+          "scoring_origins": 1844,
+          "symbol": "DOGEUSDT"
+        },
+        {
+          "archived_prediction_max_absolute_error": {
+            "KM": 0.0,
+            "matched_logistic": 0.0,
+            "tree": 0.0
+          },
+          "financing": "zero_rate",
+          "historical_score_and_gain_parity": true,
+          "scoring_origins": 2458,
+          "symbol": "ADAUSDT"
+        },
+        {
+          "archived_prediction_max_absolute_error": {
+            "KM": 0.0,
+            "matched_logistic": 0.0,
+            "tree": 0.0
+          },
+          "financing": "nyfed_effr_lag7d",
+          "historical_score_and_gain_parity": true,
+          "scoring_origins": 2342,
+          "symbol": "ADAUSDT"
+        }
+      ],
+      "original_BTC_ETH_sha256": "0368872e6995a9c22914f2b71cc03aec2f8724413781598b3f8850a40621ad04",
+      "sha256": "5692936bd8af3052514cb6554fc487c3a40a60ebd17a8ba5bea916e49979c435"
+    }
+  },
+  "preservation": {
+    "allowed_existing_source_changes": [
+      "src/spot_perp_basis/data/windows.py",
+      "src/spot_perp_basis/evaluation/statistics.py",
+      "src/spot_perp_basis/training/fit.py"
+    ],
+    "checks_on_market_files": "file_size_and_mtime_only_no_market_content_hashing",
+    "data_file_states_unchanged": 3180,
+    "experiment_file_states_unchanged": 22876,
+    "frozen_authority_sha256": {
+      "configs/final_evaluation.yaml": "647fc5f3ca09b58c0a7ea74644b6316ed7eda6fd6e3ed1d741464e57d6861e21",
+      "docs/final_evaluation_freeze_receipt.md": "2a74cb15c1121f56d5cdd9e3db146c89dd299dd9ecd612f7ca3aafbad3eed2c0",
+      "docs/final_evaluation_protocol.md": "728d1596f0a219847a252de57dff72867801c090326779eedc8df11383631e26"
+    },
+    "git_HEAD_refs_remotes": "unchanged",
+    "git_index_after_sha256": "881a258c9ef5536be56e4f8c0c292fa14f61353a7ad9df3c1aede55784f892ae",
+    "git_index_before_sha256": "06e6372f1276e5b5060dd15ddfbaf36f5ffdbc16a09a4b9e741bf5f86f64cf30",
+    "git_index_metadata_note": "Binary index changed during inspection; staged path/blob unchanged, consistent with stat-cache refresh. No staging command ran.",
+    "git_staged_paths_and_blob": "unchanged_sole_preexisting_frozen_yaml",
+    "git_staging_commit_push_executed": false,
+    "original_guard_and_statistical_function_ASTs": "unchanged",
+    "prior_content_hashes_unchanged": 343,
+    "prior_file_states_unchanged": 26432,
+    "results_file_states_unchanged": 110
+  },
+  "protocol": "final-survival-evaluation-v1.0.0",
+  "recommended_next_task": "Development-only checkpoint serialization/operational IO contract review; do not open final observations.",
+  "remaining_gates": {
+    "final_execution": "separate explicit authorization after applicable gates",
+    "financial_replay": "continuous state/checkpoint accounting engineering and parity, outside this task",
+    "forecasting_engineering": "final-mode IO/operational integration remains disabled and requires bounded preflight",
+    "future_data": "separate acquisition/structural_QA authorization and verified market/EFFR coverage"
+  },
+  "resolved_preliminary_checks": [
+    "Initial report used an incorrect YAML key; corrected to chronology.windows before any completed output.",
+    "Initial nanosecond boundary test used a microsecond dtype; fixture corrected to explicit ns. Final 24/213 suites pass."
+  ],
+  "scope": {
+    "financial_policy_backtest": false,
+    "frozen_rule_change": false,
+    "market_or_EFFR_download": false,
+    "new_model_search_or_tuning": false,
+    "real_post2022_content_access_or_hash": false
+  },
+  "status": "ANNUAL_FORECASTING_ADAPTERS_READY_FOR_FINAL_PREFLIGHT",
+  "synthetic_demonstration": {
+    "equal_asset": {
+      "financing": "zero_rate",
+      "gain": 0.18964460569986522,
+      "missing_cells": [],
+      "required_cells": 4,
+      "status": "supported",
+      "weight_per_cell": 0.25
+    },
+    "final_12_cell_aggregate": {
+      "financing": "zero_rate",
+      "gain": null,
+      "missing_cells": [
+        [
+          "BTCUSDT",
+          2023
+        ],
+        [
+          "ETHUSDT",
+          2023
+        ],
+        [
+          "DOGEUSDT",
+          2023
+        ],
+        [
+          "ADAUSDT",
+          2023
+        ],
+        [
+          "BTCUSDT",
+          2024
+        ],
+        [
+          "ETHUSDT",
+          2024
+        ],
+        [
+          "DOGEUSDT",
+          2024
+        ],
+        [
+          "ADAUSDT",
+          2024
+        ],
+        [
+          "BTCUSDT",
+          2025
+        ],
+        [
+          "ETHUSDT",
+          2025
+        ],
+        [
+          "DOGEUSDT",
+          2025
+        ],
+        [
+          "ADAUSDT",
+          2025
+        ]
+      ],
+      "required_cells": 12,
+      "status": "unavailable_required_cell",
+      "weight_per_cell": 0.08333333333333333
+    },
+    "fitting_support": {
+      "ADAUSDT": {
+        "calibration_counts": {
+          "calibrated_coarse_logistic": 2065,
+          "calibrated_matched_logistic": 2065,
+          "calibrated_tree": 2065
+        },
+        "calibration_sources": {
+          "calibrated_coarse_logistic": "asset",
+          "calibrated_matched_logistic": "asset",
+          "calibrated_tree": "asset"
+        },
+        "model_status": {
+          "KM": "fit",
+          "coarse_logistic": "fit",
+          "matched_logistic": "fit",
+          "tree": "fit"
+        },
+        "origins": 14553,
+        "trials": 150970
+      },
+      "BTCUSDT": {
+        "calibration_counts": {
+          "calibrated_coarse_logistic": 2033,
+          "calibrated_matched_logistic": 2033,
+          "calibrated_tree": 2033
+        },
+        "calibration_sources": {
+          "calibrated_coarse_logistic": "asset",
+          "calibrated_matched_logistic": "asset",
+          "calibrated_tree": "asset"
+        },
+        "model_status": {
+          "KM": "fit",
+          "coarse_logistic": "fit",
+          "matched_logistic": "fit",
+          "tree": "fit"
+        },
+        "origins": 14547,
+        "trials": 119738
+      },
+      "DOGEUSDT": {
+        "calibration_counts": {
+          "calibrated_coarse_logistic": 2058,
+          "calibrated_matched_logistic": 2058,
+          "calibrated_tree": 2058
+        },
+        "calibration_sources": {
+          "calibrated_coarse_logistic": "asset",
+          "calibrated_matched_logistic": "asset",
+          "calibrated_tree": "asset"
+        },
+        "model_status": {
+          "KM": "fit",
+          "coarse_logistic": "fit",
+          "matched_logistic": "fit",
+          "tree": "fit"
+        },
+        "origins": 14550,
+        "trials": 142536
+      },
+      "ETHUSDT": {
+        "calibration_counts": {
+          "calibrated_coarse_logistic": 2060,
+          "calibrated_matched_logistic": 2060,
+          "calibrated_tree": 2060
+        },
+        "calibration_sources": {
+          "calibrated_coarse_logistic": "asset",
+          "calibrated_matched_logistic": "asset",
+          "calibrated_tree": "asset"
+        },
+        "model_status": {
+          "KM": "fit",
+          "coarse_logistic": "fit",
+          "matched_logistic": "fit",
+          "tree": "fit"
+        },
+        "origins": 14550,
+        "trials": 132320
+      }
+    },
+    "forecast_status_counts": {
+      "issued": 314766,
+      "unavailable_origin_features": 528,
+      "unsupported_model_or_map": 66
+    },
+    "label_attachment_preserves_all_issuance_fields": true,
+    "model_origin_rows": 315360,
+    "outcome_status_counts": {
+      "early_censored": 2061,
+      "known_8h": 313002,
+      "unavailable_origin": 297
+    },
+    "primary_cases": [
+      {
+        "financing": "zero_rate",
+        "gain": 0.1816284077015387,
+        "paired_origins": 6196,
+        "symbol": "BTCUSDT",
+        "year": 2022
+      },
+      {
+        "financing": "zero_rate",
+        "gain": 0.198366384748774,
+        "paired_origins": 6187,
+        "symbol": "ETHUSDT",
+        "year": 2022
+      },
+      {
+        "financing": "zero_rate",
+        "gain": 0.19010880290533427,
+        "paired_origins": 6176,
+        "symbol": "DOGEUSDT",
+        "year": 2022
+      },
+      {
+        "financing": "zero_rate",
+        "gain": 0.18847482744381383,
+        "paired_origins": 6190,
+        "symbol": "ADAUSDT",
+        "year": 2022
+      }
+    ],
+    "scheduled_asset_origins": 35040,
+    "shared_calendar_interval": {
+      "assets": 4,
+      "ci_high": 0.19290423546230448,
+      "ci_low": 0.18603653937800232,
+      "interval_status": "conditional_shared_calendar_development_diagnostic",
+      "leave_one_block_out_max": 0.190376857934622,
+      "leave_one_block_out_min": 0.18896568324637097,
+      "macro_gain": 0.18964460569986524,
+      "observation_weighted_gain": 0.18964134248575495,
+      "occupied_calendar_blocks": 27,
+      "paired_origins": 24749
+    },
+    "snapshot_sha256": "924b700fcd526a372f50a2d50c10233ad63e95981db81d9890452286b13a3490",
+    "source": "date_complete_simulated_prices_not_real_market_data",
+    "windows": {
+      "calibration": [
+        "2021-09-01T00:00:00+00:00",
+        "2022-01-01T00:00:00+00:00"
+      ],
+      "evaluation": [
+        "2022-01-01T00:00:00+00:00",
+        "2023-01-01T00:00:00+00:00"
+      ],
+      "fit": [
+        "2020-01-01T00:00:00+00:00",
+        "2021-09-01T00:00:00+00:00"
+      ],
+      "role": "development_demonstration",
+      "year": 2022
+    }
+  },
+  "tests": {
+    "archival_hash_integrations_omitted_by_unchanged_portable_runner": 3,
+    "existing_portable_tests_preserved": 189,
+    "focused": {
+      "log_sha256": "f1055eae8954b2525b79820ae08e06f66029aa25188e0da2b5c39cf2f6cc80b0",
+      "tests_passed": 24
+    },
+    "portable": {
+      "log_sha256": "2036b4bafac46f992d9ab6693624b8024f17cd0a559d9937dbfc55d4caf7991b",
+      "tests_passed": 213
+    }
+  }
+}

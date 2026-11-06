@@ -2,6 +2,7 @@
 
 import numpy as np
 import pandas as pd
+from dataclasses import dataclass
 
 
 # Development access bounds
@@ -77,3 +78,48 @@ def purged_fold(frame, fold, embargo_hours):
                     & (available < start-pd.Timedelta(hours=embargo_hours))]
     evaluation = frame.loc[(origin >= start) & (origin < end) & (available < end)]
     return fit, evaluation
+
+
+@dataclass(frozen=True)
+class AnnualWindows:
+    """Pure calendar metadata; constructing it grants no observation access."""
+    year: int
+    fit: tuple
+    calibration: tuple
+    evaluation: tuple
+
+    def __post_init__(self):
+        start = pd.Timestamp(f'{self.year}-01-01', tz='UTC')
+        expected = ((start-pd.DateOffset(months=24), start-pd.DateOffset(months=4)),
+                    (start-pd.DateOffset(months=4), start),
+                    (start, start+pd.DateOffset(years=1)))
+        actual = (self.fit, self.calibration, self.evaluation)
+        if actual != expected:
+            raise ValueError('Require exact UTC 20/4/full-calendar-year half-open windows')
+        if any(t.tz is None or str(t.tz) != 'UTC' for w in actual for t in w):
+            raise ValueError('Require UTC calendar boundaries')
+
+    def as_dict(self):
+        return {'year':self.year, **{n:[t.isoformat() for t in getattr(self,n)]
+                for n in ('fit','calibration','evaluation')},
+                'role':'registered_calendar_only' if self.year in (2023,2024,2025) else 'development_demonstration'}
+
+
+def annual_windows(year):
+    """Registered schedules, plus compatible earlier dates for explicit demos."""
+    if isinstance(year, bool) or not isinstance(year, int):
+        raise ValueError('Integer calendar year required')
+    start = pd.Timestamp(f'{year}-01-01', tz='UTC')
+    return AnnualWindows(year, (start-pd.DateOffset(months=24),start-pd.DateOffset(months=4)),
+                         (start-pd.DateOffset(months=4),start), (start,start+pd.DateOffset(years=1)))
+
+
+def origin_mask(index, begin, end, *, purge=False):
+    """Pure half-open selection; optional strict t+16h<C fitting purge."""
+    idx = pd.DatetimeIndex(index)
+    begin, end = pd.Timestamp(begin), pd.Timestamp(end)
+    if idx.tz is None or begin.tz is None or end.tz is None or not begin < end:
+        raise ValueError('Timezone-aware ordered interval required')
+    mask = (idx>=begin)&(idx<end)
+    if purge: mask &= idx+pd.Timedelta(hours=16)<end
+    return mask

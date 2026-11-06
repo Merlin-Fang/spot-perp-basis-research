@@ -49,3 +49,28 @@ def block_weights(index,repetitions=None, *, anchor=pd.Timestamp("2022-01-01", t
 def weighted_risk(p,weights,seed, *, capital_usdt=3000000):
     p=np.asarray(p,float);w=np.asarray(weights,float);total=w.sum(axis=1);cash=w*p;equity=seed+cash.cumsum(axis=1);peaks=np.maximum.accumulate(np.c_[np.full(len(w),seed),equity],axis=1)[:,1:]
     return {'net_pnl':cash.sum(axis=1),'daily_downside_deviation_C0':np.sqrt((w*np.minimum(p/capital_usdt,0)**2).sum(axis=1)/total),'maximum_daily_drawdown_usdt':(peaks-equity).max(axis=1)}
+
+
+def joint_calendar_interval(records, year, required_assets):
+    """Canonical annual bootstrap with strict complete-scope support."""
+    d=records.loc[records.symbol.isin(required_assets)].copy()
+    missing=[s for s in required_assets if not d.symbol.eq(s).any()]
+    if missing or not np.isfinite(d.gain.to_numpy(float)).all():
+        return {'interval_status':'unavailable_required_asset_or_score','macro_gain':None,
+                'ci_low':None,'ci_high':None,'missing_assets':missing}
+    clock=pd.DatetimeIndex(d.origin_time_utc)
+    if clock.tz is None or (clock.year!=year).any() or d.duplicated(['symbol','origin_time_utc']).any():
+        raise ValueError('Require unique asset/origin keys within one UTC evaluation year')
+    return block_interval(d,year)
+
+
+def complete_matrix_mean(rows, assets, years, financing):
+    """Equal asset/year point only; no inferred cross-year uncertainty."""
+    d=rows.loc[rows.financing.eq(financing)&rows.symbol.isin(assets)&rows.year.isin(years)]
+    if d.duplicated(['symbol','year']).any():raise ValueError('Duplicate aggregate cell')
+    lookup={(r.symbol,r.year):r.gain for r in d.itertuples()}
+    missing=[(a,y) for y in years for a in assets if (a,y) not in lookup or not np.isfinite(lookup[(a,y)])]
+    return {'status':'unavailable_required_cell' if missing else 'supported',
+            'gain':None if missing else float(np.mean([lookup[(a,y)] for y in years for a in assets])),
+            'financing':financing,'required_cells':len(assets)*len(years),
+            'weight_per_cell':1/(len(assets)*len(years)),'missing_cells':missing}
