@@ -1,0 +1,689 @@
+{
+  "BTC_ETH_preservation": {
+    "original_26_focused_test_method_ASTs_unchanged": true,
+    "original_report_copy": "results/checkpoints/2026-11-09/btc_eth_baseline_v1.md",
+    "original_verification_copy": "results/checkpoints/2026-11-09/btc_eth_verification_v1.json",
+    "original_verification_sha256": "d94aa55fa291da8f8948f74a6417deb57e5e710cbef5a6648e110acf7049d8a1",
+    "path": "results/checkpoints/2026-11-09/baseline.json",
+    "sha256": "0368872e6995a9c22914f2b71cc03aec2f8724413781598b3f8850a40621ad04",
+    "status": "all_prior_cases_primary_intervals_and_minute_diagnostic_unchanged"
+  },
+  "IPCW": {
+    "additional_weight_truncation": false,
+    "early_censored_zero_contribution_retained_in_denominator": true,
+    "same_canonical_support_for_score_difference_interval": true,
+    "support_floor": 0.05
+  },
+  "case_support": [
+    {
+      "IPCW_nonzero_weight_max": 1.0100768823824227,
+      "KM_common_scoring_keys_sha256": "d888917314fda8e246928b1744cdd5cd63f9a335c5190bdeeea53dfad76217c5",
+      "censor_G8": 0.9900236481418575,
+      "early_censored_origins": 0,
+      "events_by_8h": 80,
+      "financing": "zero_rate",
+      "finite_issued_predictions": {
+        "KM": 8758,
+        "matched_logistic": 8758,
+        "tree": 8758
+      },
+      "fit_status": {
+        "KM": "fit",
+        "matched_logistic": "fit",
+        "tree": "fit"
+      },
+      "full_evaluation_clock": 8760,
+      "pair_scoring_keys_sha256": "d888917314fda8e246928b1744cdd5cd63f9a335c5190bdeeea53dfad76217c5",
+      "scoring_origins": 210,
+      "survivors_to_8h": 130,
+      "symbol": "BTCUSDT"
+    },
+    {
+      "IPCW_nonzero_weight_max": 1.010101732531037,
+      "KM_common_scoring_keys_sha256": "3b5396b192463dcb08d483b2c3ac157fa56c5eb3f9651855ca571aa9adb8260e",
+      "censor_G8": 0.9899992919468369,
+      "early_censored_origins": 0,
+      "events_by_8h": 82,
+      "financing": "nyfed_effr_lag7d",
+      "finite_issued_predictions": {
+        "KM": 8758,
+        "matched_logistic": 8758,
+        "tree": 8758
+      },
+      "fit_status": {
+        "KM": "fit",
+        "matched_logistic": "fit",
+        "tree": "fit"
+      },
+      "full_evaluation_clock": 8760,
+      "pair_scoring_keys_sha256": "3b5396b192463dcb08d483b2c3ac157fa56c5eb3f9651855ca571aa9adb8260e",
+      "scoring_origins": 202,
+      "survivors_to_8h": 120,
+      "symbol": "BTCUSDT"
+    },
+    {
+      "IPCW_nonzero_weight_max": 1.010195723907465,
+      "KM_common_scoring_keys_sha256": "397c9706957e865bbb66c9ec28f0e5d1e1517fe031b87f275947ed30efe31411",
+      "censor_G8": 0.9899071797017436,
+      "early_censored_origins": 5,
+      "events_by_8h": 106,
+      "financing": "zero_rate",
+      "finite_issued_predictions": {
+        "KM": 8758,
+        "matched_logistic": 8758,
+        "tree": 8758
+      },
+      "fit_status": {
+        "KM": "fit",
+        "matched_logistic": "fit",
+        "tree": "fit"
+      },
+      "full_evaluation_clock": 8760,
+      "pair_scoring_keys_sha256": "397c9706957e865bbb66c9ec28f0e5d1e1517fe031b87f275947ed30efe31411",
+      "scoring_origins": 320,
+      "survivors_to_8h": 209,
+      "symbol": "ETHUSDT"
+    },
+    {
+      "IPCW_nonzero_weight_max": 1.010229983557028,
+      "KM_common_scoring_keys_sha256": "a2ddd6b926fba920b92f95efc71a9e6947659db559f8bab2677dafb3081f3071",
+      "censor_G8": 0.9898736092537976,
+      "early_censored_origins": 3,
+      "events_by_8h": 103,
+      "financing": "nyfed_effr_lag7d",
+      "finite_issued_predictions": {
+        "KM": 8758,
+        "matched_logistic": 8758,
+        "tree": 8758
+      },
+      "fit_status": {
+        "KM": "fit",
+        "matched_logistic": "fit",
+        "tree": "fit"
+      },
+      "full_evaluation_clock": 8760,
+      "pair_scoring_keys_sha256": "a2ddd6b926fba920b92f95efc71a9e6947659db559f8bab2677dafb3081f3071",
+      "scoring_origins": 312,
+      "survivors_to_8h": 206,
+      "symbol": "ETHUSDT"
+    },
+    {
+      "IPCW_nonzero_weight_max": 1.3771916126006551,
+      "KM_common_scoring_keys_sha256": "8b140e6c53199b7723cab9283abbbbc46cea6babe3b34aed75902d2af74404ac",
+      "censor_G8": 0.7261153719282565,
+      "early_censored_origins": 1,
+      "events_by_8h": 1600,
+      "financing": "zero_rate",
+      "finite_issued_predictions": {
+        "KM": 8756,
+        "matched_logistic": 8756,
+        "tree": 8756
+      },
+      "fit_status": {
+        "KM": "fit",
+        "matched_logistic": "fit",
+        "tree": "fit"
+      },
+      "full_evaluation_clock": 8760,
+      "pair_scoring_keys_sha256": "8b140e6c53199b7723cab9283abbbbc46cea6babe3b34aed75902d2af74404ac",
+      "scoring_origins": 1912,
+      "survivors_to_8h": 311,
+      "symbol": "DOGEUSDT"
+    },
+    {
+      "IPCW_nonzero_weight_max": 1.3771916126006551,
+      "KM_common_scoring_keys_sha256": "855036ac6d893d764caaacb260e4aaa2a6291e900f9c231683a48ee5f0b9f38e",
+      "censor_G8": 0.7261153719282565,
+      "early_censored_origins": 1,
+      "events_by_8h": 1545,
+      "financing": "nyfed_effr_lag7d",
+      "finite_issued_predictions": {
+        "KM": 8756,
+        "matched_logistic": 8756,
+        "tree": 8756
+      },
+      "fit_status": {
+        "KM": "fit",
+        "matched_logistic": "fit",
+        "tree": "fit"
+      },
+      "full_evaluation_clock": 8760,
+      "pair_scoring_keys_sha256": "855036ac6d893d764caaacb260e4aaa2a6291e900f9c231683a48ee5f0b9f38e",
+      "scoring_origins": 1844,
+      "survivors_to_8h": 298,
+      "symbol": "DOGEUSDT"
+    },
+    {
+      "IPCW_nonzero_weight_max": 1.0818216154494145,
+      "KM_common_scoring_keys_sha256": "16129ab4a2c9ca1e5b78996430b67b2c056262e78be21427baa5488ecde40874",
+      "censor_G8": 0.924366814009883,
+      "early_censored_origins": 1,
+      "events_by_8h": 2056,
+      "financing": "zero_rate",
+      "finite_issued_predictions": {
+        "KM": 8756,
+        "matched_logistic": 8756,
+        "tree": 8756
+      },
+      "fit_status": {
+        "KM": "fit",
+        "matched_logistic": "fit",
+        "tree": "fit"
+      },
+      "full_evaluation_clock": 8760,
+      "pair_scoring_keys_sha256": "16129ab4a2c9ca1e5b78996430b67b2c056262e78be21427baa5488ecde40874",
+      "scoring_origins": 2458,
+      "survivors_to_8h": 401,
+      "symbol": "ADAUSDT"
+    },
+    {
+      "IPCW_nonzero_weight_max": 1.0818216154494145,
+      "KM_common_scoring_keys_sha256": "0c66bf42c04143e2a6eecbbde113c8db1d637db9e3942f4e26a61e578c5fcb67",
+      "censor_G8": 0.924366814009883,
+      "early_censored_origins": 0,
+      "events_by_8h": 1953,
+      "financing": "nyfed_effr_lag7d",
+      "finite_issued_predictions": {
+        "KM": 8756,
+        "matched_logistic": 8756,
+        "tree": 8756
+      },
+      "fit_status": {
+        "KM": "fit",
+        "matched_logistic": "fit",
+        "tree": "fit"
+      },
+      "full_evaluation_clock": 8760,
+      "pair_scoring_keys_sha256": "0c66bf42c04143e2a6eecbbde113c8db1d637db9e3942f4e26a61e578c5fcb67",
+      "scoring_origins": 2342,
+      "survivors_to_8h": 389,
+      "symbol": "ADAUSDT"
+    }
+  ],
+  "checkpoint": "2026-11-09 four-asset eight-hour forecasting baseline",
+  "code_and_report_sha256": {
+    "docs/checkpoints/2026-11-09_baseline.md": "8670cd74a212c2e416891c47298536b28c8f1cec1c7b1538ca273e0213913e4a",
+    "scripts/checkpoint_survival_baseline.py": "d04478ef95dde06b42f0ae37dc9694071b7c0949ac9678a7e7f430dcd7add7c7",
+    "src/spot_perp_basis/evaluation/survival_audit.py": "e7e58aaf1b2bfed712f6eca87ada9c3911fa61d0c13907a32d7daa4d780baebd",
+    "tests/test_survival_checkpoint.py": "fe3352e77778bcf453ec7ac76df2dd7e00652591cbd12ab345fee2c4de98aa9e"
+  },
+  "commands_run": [
+    {
+      "command": ".venv/bin/python -B -m unittest discover -s tests -p 'test_survival_checkpoint.py' -v",
+      "exit_code": 0,
+      "passed": 29
+    },
+    {
+      "command": ".venv/bin/python -B -m scripts.test_portable",
+      "exit_code": 0,
+      "omitted_existing_archive_integrations": [
+        "test_collateral_scenario.CollateralScenarioTests.test_old_history_and_both_pre_experiment_freezes_preserved",
+        "test_five_asset_data.FiveAssetTests.test_existing_sources_data_and_experiments_preserved",
+        "test_target_audit.TargetAuditTests.test_original_history_unchanged"
+      ],
+      "passed": 189,
+      "previous_186_tests_retained": true
+    },
+    {
+      "asset_financing_cases": 8,
+      "command": ".venv/bin/python -B -m scripts.checkpoint_survival_baseline --write-report",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B -m scripts.checkpoint_survival_baseline --write-report",
+      "exit_code": 0,
+      "new_summary_report_and_original_BTC_ETH_summary_content_mtime_unchanged": true,
+      "purpose": "actual_completed_rerun"
+    }
+  ],
+  "downloads": false,
+  "failures": [],
+  "financial_market_backtests": false,
+  "forecast_evidence": "recomputed_using_maintained_predictors_and_original_May_2021_fits_no_real_data_refit_or_tuning",
+  "frozen_artifacts_unchanged_sha256": {
+    "configs/final_evaluation.yaml": "647fc5f3ca09b58c0a7ea74644b6316ed7eda6fd6e3ed1d741464e57d6861e21",
+    "docs/final_evaluation_freeze_receipt.md": "2a74cb15c1121f56d5cdd9e3db146c89dd299dd9ecd612f7ca3aafbad3eed2c0",
+    "docs/final_evaluation_protocol.md": "728d1596f0a219847a252de57dff72867801c090326779eedc8df11383631e26"
+  },
+  "git_head_at_review": "702a95d8d11b00b24194f68e208df720f35715cc",
+  "historical_forecast_maximum_absolute_difference": 0.0,
+  "historical_four_asset_primary_intervals_reconciled": true,
+  "historical_score_gain_interval_parity_tolerance": 1e-13,
+  "holdout_access": false,
+  "independent_forward_label_origin_copies": 70080,
+  "instructor_scope_response": "Adopt single-horizon forecasting and defer trading; retain four assets because already inspected development results show qualitative cross-asset heterogeneity; report both BTC/ETH and four-asset scopes without new model selection.",
+  "limitations": [
+    "previous_2022_inspection_and_informed_asset_scope",
+    "conditional_censor_KM_stability_especially_shorter_DOGE_history",
+    "different_two_feature_KM_training_cohort_disclosed",
+    "overlapping_hours_and_correlated_assets",
+    "single_year_not_final_three_year_estimand",
+    "short_BTC_ETH_only_minute_measurement_diagnostic",
+    "no_trading_or_executable_profit_evidence"
+  ],
+  "market_periods_accessed": {
+    "ADA_context": "2020-01-31 through 2022-12-31T23:00Z",
+    "BTC_ETH_context": "2020-01-08 through 2022-12-31T23:00Z",
+    "DOGE_ADA_minute_data_accessed": false,
+    "DOGE_context": "2020-07-10 through 2022-12-31T23:00Z",
+    "evaluation_origins": "2022-01-01 inclusive to 2023-01-01 exclusive",
+    "minute_rows": "unchanged BTC/ETH 2022-01-02T00:00Z through 2022-01-09T08:00Z",
+    "post2022_contents_accessed_or_hashed": false,
+    "refit_origin_window": "2020-01-01 inclusive to 2021-05-01 exclusive with original launch-aware support and strict16h purge"
+  },
+  "model_hyperparameter_or_threshold_search": false,
+  "new_compact_summary": {
+    "bytes": 72201,
+    "path": "results/checkpoints/2026-11-09/baseline_four_asset.json",
+    "sha256": "5692936bd8af3052514cb6554fc487c3a40a60ebd17a8ba5bea916e49979c435"
+  },
+  "new_real_data_fitting_or_calibration": false,
+  "prepared_client_date": "2026-11-05",
+  "preservation": {
+    "heldout_checks": "filename_size_mtime_only_no_contents",
+    "index_HEAD_refs_remotes_unchanged": true,
+    "modified_maintained_files": [
+      "scripts/checkpoint_survival_baseline.py",
+      "tests/test_survival_checkpoint.py",
+      "docs/checkpoints/2026-11-09_baseline.md",
+      "docs/checkpoints/2026-11-09_verification.json"
+    ],
+    "no_experiment_dataset_estimator_or_other_existing_test_edits": true,
+    "preexisting_metadata_states_checked": 26432,
+    "safe_preexisting_content_hashes_checked": 342,
+    "staging_commit_push_performed": false,
+    "unchanged_states_excluding_four_authorized_edits": 26428
+  },
+  "scope": {
+    "assets": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "DOGEUSDT",
+      "ADAUSDT"
+    ],
+    "evaluation": "previously_inspected_2022_development",
+    "financing_controls": [
+      "zero_rate",
+      "nyfed_effr_lag7d"
+    ],
+    "horizon_hours": 8,
+    "models": [
+      "unconditional_KM",
+      "raw_matched_hourly_logistic",
+      "raw_custom_numpy_tree"
+    ],
+    "no_confirmatory_significance_claim": true
+  },
+  "scope_summaries": {
+    "BTC_ETH": {
+      "nyfed_effr_lag7d": {
+        "common_panel_status": "supported",
+        "comparisons": {
+          "KM_minus_logistic": {
+            "assets": 2,
+            "blocks_by_asset": {
+              "BTCUSDT": 22,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.0792742915694541,
+            "ci_low": -0.11683659806182166,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.03734699572699104,
+            "leave_one_block_out_min": -0.04111381778404605,
+            "macro_gain": -0.026698897913997353,
+            "observation_weighted_gain": -0.03678751376375119,
+            "occupied_calendar_blocks": 24,
+            "paired_origins": 514,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ],
+            "scope": "two_asset_development_description_not_four_asset_final_estimand",
+            "valid_joint_draw_fraction": 1.0
+          },
+          "KM_minus_tree": {
+            "assets": 2,
+            "blocks_by_asset": {
+              "BTCUSDT": 22,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.08114358694875692,
+            "ci_low": -0.10385310984040921,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.0406731245008492,
+            "leave_one_block_out_min": -0.036733125550457824,
+            "macro_gain": -0.019874857206919387,
+            "observation_weighted_gain": -0.025725324852776735,
+            "occupied_calendar_blocks": 24,
+            "paired_origins": 514,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ],
+            "scope": "two_asset_development_description_not_four_asset_final_estimand",
+            "valid_joint_draw_fraction": 1.0
+          },
+          "logistic_minus_tree": {
+            "assets": 2,
+            "blocks_by_asset": {
+              "BTCUSDT": 22,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.022302468827292754,
+            "ci_low": -0.007734432095762999,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.009471464132851505,
+            "leave_one_block_out_min": 0.003086625205680012,
+            "macro_gain": 0.006824040707077934,
+            "observation_weighted_gain": 0.011062188910974467,
+            "occupied_calendar_blocks": 24,
+            "paired_origins": 514,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ],
+            "scope": "two_asset_development_description_not_four_asset_final_estimand",
+            "valid_joint_draw_fraction": 1.0
+          }
+        },
+        "equal_asset_Brier": {
+          "KM": 0.26470077285527266,
+          "matched_logistic": 0.29139967076927,
+          "tree": 0.28457563006219205
+        },
+        "required_assets": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ]
+      },
+      "zero_rate": {
+        "common_panel_status": "supported",
+        "comparisons": {
+          "KM_minus_logistic": {
+            "assets": 2,
+            "blocks_by_asset": {
+              "BTCUSDT": 22,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.07516759003439147,
+            "ci_low": -0.10544594323753147,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.037504471912009195,
+            "leave_one_block_out_min": -0.03338625207376238,
+            "macro_gain": -0.019662360580785913,
+            "observation_weighted_gain": -0.026832775897231584,
+            "occupied_calendar_blocks": 24,
+            "paired_origins": 530,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ],
+            "scope": "two_asset_development_description_not_four_asset_final_estimand",
+            "valid_joint_draw_fraction": 1.0
+          },
+          "KM_minus_tree": {
+            "assets": 2,
+            "blocks_by_asset": {
+              "BTCUSDT": 22,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.07317700426808345,
+            "ci_low": -0.09762811471529946,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.037636965153154206,
+            "leave_one_block_out_min": -0.03230947698043509,
+            "macro_gain": -0.016471465611007183,
+            "observation_weighted_gain": -0.01995201666718523,
+            "occupied_calendar_blocks": 24,
+            "paired_origins": 530,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ],
+            "scope": "two_asset_development_description_not_four_asset_final_estimand",
+            "valid_joint_draw_fraction": 1.0
+          },
+          "logistic_minus_tree": {
+            "assets": 2,
+            "blocks_by_asset": {
+              "BTCUSDT": 22,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.018478845548930624,
+            "ci_low": -0.010574750317661629,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.005509177864872609,
+            "leave_one_block_out_min": -0.0010422271130991912,
+            "macro_gain": 0.0031908949697787474,
+            "observation_weighted_gain": 0.006880759230046366,
+            "occupied_calendar_blocks": 24,
+            "paired_origins": 530,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ],
+            "scope": "two_asset_development_description_not_four_asset_final_estimand",
+            "valid_joint_draw_fraction": 1.0
+          }
+        },
+        "equal_asset_Brier": {
+          "KM": 0.2584596246121519,
+          "matched_logistic": 0.27812198519293785,
+          "tree": 0.2749310902231591
+        },
+        "required_assets": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ]
+      }
+    },
+    "four_asset": {
+      "nyfed_effr_lag7d": {
+        "common_panel_status": "supported",
+        "comparisons": {
+          "KM_minus_logistic": {
+            "assets": 4,
+            "blocks_by_asset": {
+              "ADAUSDT": 27,
+              "BTCUSDT": 22,
+              "DOGEUSDT": 27,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.12772657933232714,
+            "ci_low": 0.020085815268140433,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.10344237073942328,
+            "leave_one_block_out_min": 0.06475594287750677,
+            "macro_gain": 0.07219634690581493,
+            "observation_weighted_gain": 0.15217819646099004,
+            "occupied_calendar_blocks": 27,
+            "paired_origins": 4700,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT",
+              "DOGEUSDT",
+              "ADAUSDT"
+            ],
+            "scope": "four_asset_2022_development_not_final_three_year_estimand",
+            "valid_joint_draw_fraction": 1.0
+          },
+          "KM_minus_tree": {
+            "assets": 4,
+            "blocks_by_asset": {
+              "ADAUSDT": 27,
+              "BTCUSDT": 22,
+              "DOGEUSDT": 27,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.16359585735494014,
+            "ci_low": 0.05729829537222964,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.13879333320604992,
+            "leave_one_block_out_min": 0.10078515777339611,
+            "macro_gain": 0.10885146864028303,
+            "observation_weighted_gain": 0.21421395367182944,
+            "occupied_calendar_blocks": 27,
+            "paired_origins": 4700,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT",
+              "DOGEUSDT",
+              "ADAUSDT"
+            ],
+            "scope": "four_asset_2022_development_not_final_three_year_estimand",
+            "valid_joint_draw_fraction": 1.0
+          },
+          "logistic_minus_tree": {
+            "assets": 4,
+            "blocks_by_asset": {
+              "ADAUSDT": 27,
+              "BTCUSDT": 22,
+              "DOGEUSDT": 27,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.042245413671365646,
+            "ci_low": 0.029093875717234322,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.03795542375412428,
+            "leave_one_block_out_min": 0.03512948340964931,
+            "macro_gain": 0.03665512173446811,
+            "observation_weighted_gain": 0.062035757210839385,
+            "occupied_calendar_blocks": 27,
+            "paired_origins": 4700,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT",
+              "DOGEUSDT",
+              "ADAUSDT"
+            ],
+            "scope": "four_asset_2022_development_not_final_three_year_estimand",
+            "valid_joint_draw_fraction": 1.0
+          }
+        },
+        "equal_asset_Brier": {
+          "KM": 0.33040669722312205,
+          "matched_logistic": 0.25821035031730705,
+          "tree": 0.22155522858283896
+        },
+        "required_assets": [
+          "BTCUSDT",
+          "ETHUSDT",
+          "DOGEUSDT",
+          "ADAUSDT"
+        ]
+      },
+      "zero_rate": {
+        "common_panel_status": "supported",
+        "comparisons": {
+          "KM_minus_logistic": {
+            "assets": 4,
+            "blocks_by_asset": {
+              "ADAUSDT": 27,
+              "BTCUSDT": 22,
+              "DOGEUSDT": 27,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.12617016446325854,
+            "ci_low": 0.026666154836981027,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.1039179163809613,
+            "leave_one_block_out_min": 0.06889755465757637,
+            "macro_gain": 0.07600786269811477,
+            "observation_weighted_gain": 0.15364184200077724,
+            "occupied_calendar_blocks": 27,
+            "paired_origins": 4900,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT",
+              "DOGEUSDT",
+              "ADAUSDT"
+            ],
+            "scope": "four_asset_2022_development_not_final_three_year_estimand",
+            "valid_joint_draw_fraction": 1.0
+          },
+          "KM_minus_tree": {
+            "assets": 4,
+            "blocks_by_asset": {
+              "ADAUSDT": 27,
+              "BTCUSDT": 22,
+              "DOGEUSDT": 27,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.16273405264412227,
+            "ci_low": 0.06603162678163024,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.14014544134441648,
+            "leave_one_block_out_min": 0.10562889932718304,
+            "macro_gain": 0.11337894292108153,
+            "observation_weighted_gain": 0.22042228321732274,
+            "occupied_calendar_blocks": 27,
+            "paired_origins": 4900,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT",
+              "DOGEUSDT",
+              "ADAUSDT"
+            ],
+            "scope": "four_asset_2022_development_not_final_three_year_estimand",
+            "valid_joint_draw_fraction": 1.0
+          },
+          "logistic_minus_tree": {
+            "assets": 4,
+            "blocks_by_asset": {
+              "ADAUSDT": 27,
+              "BTCUSDT": 22,
+              "DOGEUSDT": 27,
+              "ETHUSDT": 23
+            },
+            "ci_high": 0.04370512747535446,
+            "ci_low": 0.029270833796514892,
+            "interval_status": "conditional_shared_calendar_development_diagnostic",
+            "leave_one_block_out_max": 0.038837451221255696,
+            "leave_one_block_out_min": 0.03542055981285133,
+            "macro_gain": 0.03737108022296682,
+            "observation_weighted_gain": 0.06678044121654554,
+            "occupied_calendar_blocks": 27,
+            "paired_origins": 4900,
+            "required_assets": [
+              "BTCUSDT",
+              "ETHUSDT",
+              "DOGEUSDT",
+              "ADAUSDT"
+            ],
+            "scope": "four_asset_2022_development_not_final_three_year_estimand",
+            "valid_joint_draw_fraction": 1.0
+          }
+        },
+        "equal_asset_Brier": {
+          "KM": 0.3275396327852471,
+          "matched_logistic": 0.25153177008713234,
+          "tree": 0.21416068986416556
+        },
+        "required_assets": [
+          "BTCUSDT",
+          "ETHUSDT",
+          "DOGEUSDT",
+          "ADAUSDT"
+        ]
+      }
+    }
+  },
+  "sorted_source_manifest_sha256": "ac44b141b2079814a62cf696b2cff3e744782f356071c5ab61d5a59a5cae606a",
+  "source_file_count": 74,
+  "source_manifest_encoding": "relative_path + NUL + content_SHA256 + newline sorted by path; full manifest in local scalar summary",
+  "status": "READY",
+  "unavailable_comparisons": [],
+  "uncertainty": {
+    "anchor": "2022-01-01T00:00Z",
+    "days_per_block": 14,
+    "independent_count_matrix_replay_passed": true,
+    "joint_weights_shared_by_all_assets_within_named_scope": true,
+    "minimum_occupied_blocks_per_asset": 8,
+    "minimum_total_origins": 30,
+    "minimum_valid_joint_draw_fraction": 0.8,
+    "repetitions": 1000,
+    "seed": 20261102,
+    "statistical_union_occupied_blocks": true
+  },
+  "verification_version": "four-asset-development-checkpoint-v2"
+}

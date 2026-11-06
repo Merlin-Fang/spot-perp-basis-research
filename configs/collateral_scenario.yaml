@@ -1,0 +1,50 @@
+schema_version: phase2-7-5-collateral-scenario-v1
+protocol_revision: pre-experiment-cash-solvency-clarification
+start: '2020-01-01T00:00:00Z'
+end: '2023-01-01T00:00:00Z'
+symbols: [BTCUSDT, ETHUSDT]
+spot_notional: 1000000
+episode_frequency: calendar_quarter
+entry_clock_utc: '09:00'
+exit_clock_last_day_utc: '23:50'
+entry_exit_delay_minutes: 1
+maximum_fill_wait_minutes: 5
+daily_decision_clock_utc: '09:00'
+primary_operational_horizon_hours: 24
+historical_label_horizons_hours: [24, 25, 48, 72]
+label_publication_lag_minutes: 1
+mark_feature_publication_lag_minutes: 1
+sample_mark_month: '2022-06'
+treasury_pool_multiple: 2.0
+reduced_pool_multiple: 0.5
+fixed_equity_fraction: 0.30
+rolling_window_days: 30
+rolling_minimum_matured_days: 20
+rolling_quantile: 0.95
+adaptive_buffer_fraction: 0.05
+wallet_cash_floor_fraction: 0.05
+volatility_lookback_hours: 24
+volatility_sigma_multiple: 3.0
+warmup_fallback_fraction: 0.30
+costs: {spot_fee_bps: 10, perp_fee_bps: 5, slippage_bps: 2}
+cash_borrowing_apr: 0.0
+opportunity_hurdle_apr: 0.05
+alternative_use_return_apr: 0.0
+policies: [fixed30, generous, rolling95, volatility3]
+scenarios:
+  - {name: primary, maintenance: 0.01, price: hybrid_close, pool: 2.0, transfer_delay_minutes: 0, transfer_fee_bps: 0, monday_outage: false, inactive_unknown: false, planning_hours: 24}
+  - {name: maintenance2, maintenance: 0.02, price: hybrid_close, pool: 2.0, transfer_delay_minutes: 0, transfer_fee_bps: 0, monday_outage: false, inactive_unknown: false, planning_hours: 24}
+  - {name: higher_excursion, maintenance: 0.01, price: hybrid_high, pool: 2.0, transfer_delay_minutes: 0, transfer_fee_bps: 0, monday_outage: false, inactive_unknown: false, planning_hours: 24}
+  - {name: delay60, maintenance: 0.01, price: hybrid_close, pool: 2.0, transfer_delay_minutes: 60, transfer_fee_bps: 0, monday_outage: false, inactive_unknown: false, planning_hours: 25}
+  - {name: monday_outage, maintenance: 0.01, price: hybrid_close, pool: 2.0, transfer_delay_minutes: 0, transfer_fee_bps: 0, monday_outage: true, inactive_unknown: false, planning_hours: 24}
+  - {name: limited_pool, maintenance: 0.01, price: hybrid_close, pool: 0.5, transfer_delay_minutes: 0, transfer_fee_bps: 0, monday_outage: false, inactive_unknown: false, planning_hours: 24}
+  - {name: transfer_cost, maintenance: 0.01, price: hybrid_close, pool: 2.0, transfer_delay_minutes: 0, transfer_fee_bps: 1, monday_outage: false, inactive_unknown: false, planning_hours: 24}
+  - {name: inactive_unknown, maintenance: 0.01, price: hybrid_close, pool: 2.0, transfer_delay_minutes: 0, transfer_fee_bps: 0, monday_outage: false, inactive_unknown: true, planning_hours: 24}
+  - {name: trade_only, maintenance: 0.01, price: trade_close, pool: 2.0, transfer_delay_minutes: 0, transfer_fee_bps: 0, monday_outage: false, inactive_unknown: false, planning_hours: 24}
+  - {name: planning72, maintenance: 0.01, price: hybrid_close, pool: 2.0, transfer_delay_minutes: 0, transfer_fee_bps: 0, monday_outage: false, inactive_unknown: false, planning_hours: 72}
+evaluation_years: [2021, 2022]
+calibration_years: [2020]
+bootstrap: {repetitions: 2000, unit: calendar_quarter_joint_assets, seed: 0}
+advanced_models_allowed: false
+full_mark_ingestion_allowed: false
+phase3_authorized: false

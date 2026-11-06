@@ -1,0 +1,45 @@
+schema_version: phase2-7-target-audit-v1
+design_date: '2026-10-31'
+start: '2020-01-01T00:00:00Z'
+end: '2023-01-01T00:00:00Z'
+origin_start: '2020-02-01T00:00:00Z'
+origin_spacing_hours: 1
+primary_horizon_hours: 72
+secondary_24h: reuse_phase2_6_only_separate_origin_protocol
+independent_origin_spacing_hours: 96
+symbols: [BTCUSDT, ETHUSDT]
+entry_delay_minutes: 1
+delay_sensitivity_minutes: 6
+maximum_fill_wait_minutes: 5
+label_publication_lag_minutes: 1
+spot_notional: 1000000
+committed_capital: 3000000
+spot_automatically_collateral: false
+maintenance_fractions: [0.01, 0.02]
+primary_maintenance_fraction: 0.01
+costs: {spot_fee_bps: 10, perp_fee_bps: 5, slippage_bps: 2}
+economic_financing_hurdle_apr: 0.05
+cash_borrowing_apr: 0
+supplementary:
+  sample_month: '2022-06'
+  interval: 1m
+  kinds: [markPriceKlines, indexPriceKlines, premiumIndexKlines]
+  feature_extra_publication_lag_minutes: 1
+  maximum_asof_age_minutes: 2
+  maximum_download_archives: 6
+  metadata_only_full_coverage_listing: true
+feature_lookbacks_hours: [1, 6, 24, 72, 168, 720, 2160]
+implemented_audit_lookbacks_hours: [1, 24, 72]
+funding_lookbacks_days: [1, 7, 30]
+minimum_matured_label_history: 168
+historical_label_window_days: 30
+quantiles: [0.5, 0.9]
+folds:
+  - {name: eval_2021, fit_start: '2020-01-01T00:00:00Z', eval_start: '2021-01-01T00:00:00Z', eval_end: '2022-01-01T00:00:00Z'}
+  - {name: eval_2022, fit_start: '2020-01-01T00:00:00Z', eval_start: '2022-01-01T00:00:00Z', eval_end: '2023-01-01T00:00:00Z'}
+embargo_hours: 72
+bootstrap: {repetitions: 1000, block_sparse_origins: 8, seed: 0}
+signals: {entry_arithmetic_basis: 0.005, exit_arithmetic_basis: -0.001, cluster_gap_hours: 72}
+advanced_models_allowed: false
+strategy_optimization_allowed: false
+phase3_authorized: false

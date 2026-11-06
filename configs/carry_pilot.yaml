@@ -1,0 +1,56 @@
+schema_version: carry-predictability-pilot-v1
+design_date: '2026-10-31'
+train_start: '2020-01-01T00:00:00Z'
+train_end: '2023-01-01T00:00:00Z'
+origin_start: '2020-02-01T09:00:00Z'
+origin_frequency: 1D
+origin_hour_utc: 9
+primary_nonoverlap_stride_days: 4
+symbols: [BTCUSDT, ETHUSDT]
+horizons_hours: [24, 72]
+primary_horizon_hours: 24
+entry_delays_minutes: [1, 6]
+primary_delay_minutes: 1
+maximum_fill_wait_minutes: 5
+label_availability_lag_minutes: 1
+funding_publication_lag_minutes: 1
+funding_rolling_days: [1, 7, 30]
+minimum_funding_events_per_day: 3
+spot_notional: 1000000
+initial_capital: 3000000
+maintenance_fraction: 0.01
+maintenance_sensitivity: 0.02
+capital_multiple_sensitivities: [1.1, 1.5, 3.0]
+primary_scenario: taker_fin5
+cost_scenarios:
+  zero: {spot_fee_bps: 0, perp_fee_bps: 0, slippage_bps: 0, financing_apr: 0}
+  low_maker_fin5: {spot_fee_bps: 2.25, perp_fee_bps: 0.18, slippage_bps: 0.25, financing_apr: 0.05}
+  taker_fin0: {spot_fee_bps: 10, perp_fee_bps: 5, slippage_bps: 2, financing_apr: 0}
+  taker_fin5: {spot_fee_bps: 10, perp_fee_bps: 5, slippage_bps: 2, financing_apr: 0.05}
+  taker_fin10: {spot_fee_bps: 10, perp_fee_bps: 5, slippage_bps: 2, financing_apr: 0.10}
+funding_forecasts: [zero, persistence, mean_1d, mean_7d, mean_30d, expanding_mean, linear_last, linear_last_and_7d]
+primary_linear_forecast: linear_last_and_7d
+primary_average_comparator: mean_7d
+folds:
+  - {name: eval_2021, fit_start: '2020-01-01T00:00:00Z', eval_start: '2021-01-01T00:00:00Z', eval_end: '2022-01-01T00:00:00Z'}
+  - {name: eval_2022, fit_start: '2020-01-01T00:00:00Z', eval_start: '2022-01-01T00:00:00Z', eval_end: '2023-01-01T00:00:00Z'}
+embargo_hours: 72
+minimum_fit_rows: 100
+bootstrap:
+  repetitions: 1000
+  block_sparse_origins: 8
+  seed: 0
+funding_condition_bins_bps: [-1000000, 0, 1.000000001, 5, 1000000]
+funding_condition_names: [nonpositive, positive_to_1bp, above_1_to_5bp, above_5bp]
+basis_condition_bins_bps: [-1000000, -5, 0, 5, 1000000]
+basis_condition_names: [below_minus5bp, minus5_to_0bp, above0_to_5bp, above5bp]
+policies: [no_trade, always_carry, persistence_break_even]
+gate:
+  minimum_primary_mse_improvement_fraction: 0.05
+  minimum_primary_complete_risk_fraction: 0.95
+  minimum_condition_count_per_asset_year: 10
+  require_skill_in_each_evaluation_year: true
+  require_pooled_loss_difference_ci_below_zero: true
+  require_positive_feasible_high_funding_mean_each_asset_year: true
+complex_models_allowed: false
+full_modeling_authorized: false
